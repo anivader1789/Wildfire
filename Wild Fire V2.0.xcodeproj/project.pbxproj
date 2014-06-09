@@ -27,6 +27,7 @@
 		2EA0E65F193C293A005F7959 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0E65E193C293A005F7959 /* LoginScreenViewController.m */; };
 		2EA0E662193C2C18005F7959 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0E661193C2C18005F7959 /* HomeScreenViewController.m */; };
 		2EA0E664193D2F32005F7959 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA0E663193D2F32005F7959 /* HomeScreen.storyboard */; };
+		9AC22BAC194645F000DBBDD0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC22BAB194645F000DBBDD0 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		2EA0E660193C2C18005F7959 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
 		2EA0E661193C2C18005F7959 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
 		2EA0E663193D2F32005F7959 /* HomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		9AC22BAA194645F000DBBDD0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		9AC22BAB194645F000DBBDD0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				2E882CD3193ACD490094EDB1 /* Supporting Files */,
 				2EA0E65D193C293A005F7959 /* LoginScreenViewController.h */,
 				2EA0E65E193C293A005F7959 /* LoginScreenViewController.m */,
+				9AC22BAA194645F000DBBDD0 /* TestViewController.h */,
+				9AC22BAB194645F000DBBDD0 /* TestViewController.m */,
 			);
 			path = "Wild Fire V2.0";
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			files = (
 				2E882CE3193ACD490094EDB1 /* ViewController.m in Sources */,
 				2EA0E662193C2C18005F7959 /* HomeScreenViewController.m in Sources */,
+				9AC22BAC194645F000DBBDD0 /* TestViewController.m in Sources */,
 				2E882CDD193ACD490094EDB1 /* AppDelegate.m in Sources */,
 				2E0C1ADC1940E7AE00C7F405 /* CameraViewController.m in Sources */,
 				2EA0E65F193C293A005F7959 /* LoginScreenViewController.m in Sources */,
