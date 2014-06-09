@@ -46,18 +46,18 @@
 }
 */
 
-- (IBAction)settingsButton:(id)sender {
-}
-
 - (IBAction)contactsButton:(id)sender {
-}
-
-- (IBAction)globeButton:(id)sender {
 }
 
 - (IBAction)followingButton:(id)sender {
 }
 
 - (IBAction)followedButton:(id)sender {
+}
+
+- (IBAction)gloabeButton:(id)sender {
+}
+
+- (IBAction)settingsButton:(id)sender {
 }
 @end

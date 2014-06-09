@@ -10,17 +10,17 @@
 
 @interface ProfilePageViewController : UIViewController
 
-- (IBAction)settingsButton:(id)sender;
+//Buttons
 - (IBAction)contactsButton:(id)sender;
-- (IBAction)globeButton:(id)sender;
 - (IBAction)followingButton:(id)sender;
 - (IBAction)followedButton:(id)sender;
+- (IBAction)gloabeButton:(id)sender;
+- (IBAction)settingsButton:(id)sender;
 
 
+//Table View
+@property (strong, nonatomic) IBOutlet UITableView *firesListTableView;
 
-
-@property (strong, nonatomic) IBOutlet UITableView *wildFiresTableView;
-
-
+//Images
 
 @end

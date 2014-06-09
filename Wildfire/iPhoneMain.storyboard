@@ -323,6 +323,97 @@
             </objects>
             <point key="canvasLocation" x="890" y="472"/>
         </scene>
+        <!--Profile Page View Controller - Profile-->
+        <scene sceneID="aFU-Vh-8yX">
+            <objects>
+                <viewController id="cyM-z6-NvF" customClass="ProfilePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APB-zY-WE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="dox-0K-6zk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgL-8t-8ft">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImQ-uo-K12">
+                                <rect key="frame" x="20" y="146" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sio-fW-obj">
+                                <rect key="frame" x="27" y="80" width="65" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cST-lx-neC">
+                                <rect key="frame" x="123" y="109" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Globe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gloabeButton:" destination="cyM-z6-NvF" eventType="touchUpInside" id="rJP-pl-LUO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-Lr-oJ1">
+                                <rect key="frame" x="196" y="89" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Following: ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="followingButton:" destination="cyM-z6-NvF" eventType="touchUpInside" id="FrV-QQ-p0s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX8-6B-UnA">
+                                <rect key="frame" x="196" y="127" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Followed:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="followedButton:" destination="cyM-z6-NvF" eventType="touchUpInside" id="tdo-sP-MLC"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrL-rY-NZM">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hla-zl-xYy"/>
+                                    <barButtonItem title="Settings" id="d84-Me-7NO">
+                                        <connections>
+                                            <action selector="settingsButton:" destination="cyM-z6-NvF" id="Nie-wI-zoV"/>
+                                            <segue destination="PF9-gP-rgp" kind="push" id="fH6-Ip-f6B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8kt-d4-FEU">
+                                <rect key="frame" x="0.0" y="169" width="320" height="355"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Profile" id="Viv-Lt-aUc">
+                        <barButtonItem key="rightBarButtonItem" title="Contacts" id="bBF-Uh-Vbk">
+                            <connections>
+                                <action selector="contactsButton:" destination="cyM-z6-NvF" id="Lid-b8-1mf"/>
+                                <segue destination="JWL-8k-sRp" kind="push" id="QcA-dj-M0g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firesListTableView" destination="8kt-d4-FEU" id="JVU-8r-Fh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GpS-oq-xJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="459"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="826-VA-Z1e">
             <objects>
@@ -430,7 +521,7 @@
                                     <barButtonItem title="Profile" id="0ED-Uc-pMv">
                                         <connections>
                                             <action selector="profileButton:" destination="tb1-U6-uxU" id="fiM-Y8-H1V"/>
-                                            <segue destination="ioN-p2-Gya" kind="push" id="dsb-eQ-xt7"/>
+                                            <segue destination="cyM-z6-NvF" kind="push" id="m7O-9z-wZT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Ai-8N-Jxr"/>
@@ -443,7 +534,7 @@
                                     <barButtonItem title="Camera" id="1Ws-GW-Vnd">
                                         <connections>
                                             <action selector="cameraButton:" destination="tb1-U6-uxU" id="k0X-Qu-cw9"/>
-                                            <segue destination="T1B-Ki-KBd" kind="push" id="nZV-7v-3Hh"/>
+                                            <segue destination="T1B-Ki-KBd" kind="push" id="2x9-TE-orT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lap-bS-Ah9"/>
@@ -472,102 +563,11 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="listOfFiresTableView" destination="VUV-Nn-hT3" id="7UC-8H-Qw6"/>
-                        <outlet property="trendingButton" destination="9hK-7S-qwl" id="S2V-sF-aap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJX-Dt-y5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="205" y="-221"/>
-        </scene>
-        <!--Profile Page View Controller - Profile Page-->
-        <scene sceneID="4qS-tZ-Zz4">
-            <objects>
-                <viewController id="ioN-p2-Gya" customClass="ProfilePageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u1M-Dy-MDF"/>
-                        <viewControllerLayoutGuide type="bottom" id="4YB-gO-yb6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KF0-W9-bJo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IeC-wm-JWt">
-                                <rect key="frame" x="0.0" y="169" width="320" height="355"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2D-Ab-AhL">
-                                <rect key="frame" x="20" y="140" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tl-le-t6r">
-                                <rect key="frame" x="27" y="74" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-vh-7H2">
-                                <rect key="frame" x="123" y="103" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Globe">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="globeButton:" destination="ioN-p2-Gya" eventType="touchUpInside" id="ahP-Ts-fdX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-JS-wlW">
-                                <rect key="frame" x="196" y="83" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Following: ">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="followingButton:" destination="ioN-p2-Gya" eventType="touchUpInside" id="XPK-Ir-To6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-Do-MH6">
-                                <rect key="frame" x="196" y="121" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Followed:">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="followedButton:" destination="ioN-p2-Gya" eventType="touchUpInside" id="uST-67-bKA"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2zZ-TD-wbP"/>
-                        <barButtonItem title="Settings" id="ZXa-Ah-tjs">
-                            <connections>
-                                <action selector="settingsButton:" destination="ioN-p2-Gya" id="UyM-y4-c9F"/>
-                                <segue destination="PF9-gP-rgp" kind="push" id="9yf-Xc-Pgh"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Profile Page" id="mi7-xY-Cle">
-                        <barButtonItem key="rightBarButtonItem" title="Contacts" id="5fh-Ub-BmR">
-                            <connections>
-                                <action selector="contactsButton:" destination="ioN-p2-Gya" id="V5i-pd-541"/>
-                                <segue destination="JWL-8k-sRp" kind="push" id="99L-oB-Vrz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="contactsTableView" destination="IeC-wm-JWt" id="Zxb-VL-J7Z"/>
-                        <outlet property="followedButton" destination="ob4-Do-MH6" id="jVj-ag-USL"/>
-                        <outlet property="followingButton" destination="eBI-JS-wlW" id="cl3-Gk-poA"/>
-                        <outlet property="usersFollowingYouTableView" destination="IeC-wm-JWt" id="1pK-gE-hvG"/>
-                        <outlet property="wildFiresTableView" destination="IeC-wm-JWt" id="H67-cA-Sfo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ac-2m-9Tn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="105" y="472"/>
         </scene>
         <!--Photo View Controller - Photo-->
         <scene sceneID="Imu-xz-fl1">
@@ -651,7 +651,7 @@
             </objects>
             <point key="canvasLocation" x="-462" y="1168"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings View Controller - Settings-->
         <scene sceneID="0bF-kH-2zt">
             <objects>
                 <viewController id="PF9-gP-rgp" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -664,7 +664,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="C1i-Vd-XDa"/>
+                    <navigationItem key="navigationItem" title="Settings" id="C1i-Vd-XDa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54P-9l-Fqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
