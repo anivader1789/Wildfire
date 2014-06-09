@@ -16,9 +16,9 @@
 @implementation SignUpViewController
 
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
+static const CGFloat MINIMUM_SCROLL_FRACTION = 0.1;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 96;
+static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 206;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 CGFloat animatedDistance;
 
@@ -37,6 +37,8 @@ CGFloat animatedDistance;
     // Do any additional setup after loading the view.
     
     _profilePic.layer.cornerRadius = 42.5;
+    
+    //[_usernameText becomeFirstResponder];
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     gestureRecognizer.cancelsTouchesInView = NO; //so that action such as clear text field button can be pressed
@@ -155,6 +157,16 @@ CGFloat animatedDistance;
                         });
                         [Utilities processProfilePictureData:_imageData];
                         
+                        //Subscribe to private push channel
+                        if (newUser) {
+                            NSString *privateChannelName = [NSString stringWithFormat:@"user_%@", [newUser objectId]];
+                            [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+                            [[PFInstallation currentInstallation] addUniqueObject:privateChannelName forKey:@"channels"];
+                            [[PFInstallation currentInstallation] saveEventually];
+                            
+                            [newUser setObject:privateChannelName forKey:@"channel"];
+                        }
+                        
                         //Save the user
                         [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             
@@ -193,6 +205,16 @@ CGFloat animatedDistance;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 });
+                
+                //Subscribe to private push channel
+                if (newUser) {
+                    NSString *privateChannelName = [NSString stringWithFormat:@"user_%@", [newUser objectId]];
+                    [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+                    [[PFInstallation currentInstallation] addUniqueObject:privateChannelName forKey:@"channels"];
+                    [[PFInstallation currentInstallation] saveEventually];
+                    
+                    [newUser setObject:privateChannelName forKey:@"channel"];
+                }
                 
                 //Save the user
                 [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -277,6 +299,7 @@ CGFloat animatedDistance;
 #pragma mark - Text Field Delegate Methods
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    NSLog(@"method called..");
     CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
     CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
     CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
