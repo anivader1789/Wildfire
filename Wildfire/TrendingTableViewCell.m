@@ -1,14 +1,14 @@
 //
-//  InviteFriendsCell.m
+//  TrendingTableViewCell.m
 //  Wildfire
 //
-//  Created by Jeffrey Monaco on 6/6/14.
+//  Created by Jeffrey Monaco on 6/9/14.
 //  Copyright (c) 2014 Mobile AUG. All rights reserved.
 //
 
-#import "InviteFriendsCell.h"
+#import "TrendingTableViewCell.h"
 
-@implementation InviteFriendsCell
+@implementation TrendingTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

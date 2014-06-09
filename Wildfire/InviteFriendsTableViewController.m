@@ -7,7 +7,7 @@
 //
 
 #import "InviteFriendsTableViewController.h"
-#import "InviteFriendsCell.h"
+#import "InviteFriendsTableViewCell.h"
 
 @interface InviteFriendsTableViewController ()
 
@@ -72,7 +72,7 @@
     
     NSLog(@"Invite friends Table loaded");
     static NSString *CellIdentifier = @"TableCell";
-    InviteFriendsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    InviteFriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     int row = [indexPath row];
     

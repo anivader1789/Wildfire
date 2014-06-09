@@ -14,13 +14,15 @@
 		2E489660194601CD002584BB /* WildFire.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E48965F194601CD002584BB /* WildFire.png */; };
 		2E4896631946027B002584BB /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4896621946027B002584BB /* CameraViewController.m */; };
 		2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E489665194602A5002584BB /* LoginScreenViewController.m */; };
-		2E5BCFF619422CAB00B3446E /* InviteFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BCFF519422CAB00B3446E /* InviteFriendsCell.m */; };
 		2E5BCFFD1942448700B3446E /* contactsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BCFFC1942448700B3446E /* contactsIcon.png */; };
 		2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */; };
 		2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90976519461594003BF5A4 /* ProfilePageViewController.m */; };
 		2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90976B194620A6003BF5A4 /* ContactsPageViewController.m */; };
 		2E90976F194633B4003BF5A4 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90976E194633B4003BF5A4 /* PhotoViewController.m */; };
 		2E90977219463942003BF5A4 /* InviteFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90977119463942003BF5A4 /* InviteFriendsTableViewCell.m */; };
+		2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */; };
+		2ECF47F819465F7A00D53EFB /* Wild Fire Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECF47F719465F7A00D53EFB /* Wild Fire Logo.png */; };
+		2ECF47FB1946641600D53EFB /* TrendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */; };
 		9A2EB2F41942311200A9D609 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EB2F31942311200A9D609 /* Parse.framework */; };
 		9A2EB2F5194232EC00A9D609 /* facebooksdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EB2F11942153100A9D609 /* facebooksdk.framework */; };
 		9A2EB2F71942332F00A9D609 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EB2F61942332F00A9D609 /* StoreKit.framework */; };
@@ -91,8 +93,6 @@
 		2E4896621946027B002584BB /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		2E489664194602A5002584BB /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
 		2E489665194602A5002584BB /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
-		2E5BCFF419422CAB00B3446E /* InviteFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsCell.h; sourceTree = "<group>"; };
-		2E5BCFF519422CAB00B3446E /* InviteFriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsCell.m; sourceTree = "<group>"; };
 		2E5BCFFC1942448700B3446E /* contactsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactsIcon.png; sourceTree = "<group>"; };
 		2E909761194613B0003BF5A4 /* FIndFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIndFriendsTableViewController.h; sourceTree = "<group>"; };
 		2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIndFriendsTableViewController.m; sourceTree = "<group>"; };
@@ -104,6 +104,11 @@
 		2E90976E194633B4003BF5A4 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		2E90977019463942003BF5A4 /* InviteFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsTableViewCell.h; sourceTree = "<group>"; };
 		2E90977119463942003BF5A4 /* InviteFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsTableViewCell.m; sourceTree = "<group>"; };
+		2ECF47F419465F2E00D53EFB /* TrendingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingTableViewCell.h; sourceTree = "<group>"; };
+		2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingTableViewCell.m; sourceTree = "<group>"; };
+		2ECF47F719465F7A00D53EFB /* Wild Fire Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wild Fire Logo.png"; sourceTree = "<group>"; };
+		2ECF47F91946641600D53EFB /* TrendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingTableViewController.h; sourceTree = "<group>"; };
+		2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingTableViewController.m; sourceTree = "<group>"; };
 		9A2EB2F11942153100A9D609 /* facebooksdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = facebooksdk.framework; sourceTree = "<group>"; };
 		9A2EB2F31942311200A9D609 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9A2EB2F61942332F00A9D609 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -213,6 +218,7 @@
 		2E5BCFF71942428100B3446E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2ECF47F719465F7A00D53EFB /* Wild Fire Logo.png */,
 				2E48965F194601CD002584BB /* WildFire.png */,
 				2E28FAFF1944C0B3001B1634 /* facebookIcon.png */,
 				2E28FAFD1944BEEC001B1634 /* rightArrow.png */,
@@ -334,6 +340,8 @@
 				9AC22B971946123B00DBBDD0 /* Utilities.m */,
 				2E90977019463942003BF5A4 /* InviteFriendsTableViewCell.h */,
 				2E90977119463942003BF5A4 /* InviteFriendsTableViewCell.m */,
+				2ECF47F419465F2E00D53EFB /* TrendingTableViewCell.h */,
+				2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -347,8 +355,6 @@
 				2E489665194602A5002584BB /* LoginScreenViewController.m */,
 				2E4896611946027B002584BB /* CameraViewController.h */,
 				2E4896621946027B002584BB /* CameraViewController.m */,
-				2E5BCFF419422CAB00B3446E /* InviteFriendsCell.h */,
-				2E5BCFF519422CAB00B3446E /* InviteFriendsCell.m */,
 				2E28FAFA1944BB04001B1634 /* InviteFriendsTableViewController.h */,
 				2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */,
 				9AC22B9319460D2300DBBDD0 /* SignUpViewController.h */,
@@ -366,6 +372,8 @@
 				2E90976E194633B4003BF5A4 /* PhotoViewController.m */,
 				2E41D74A1946446E00FE4CE2 /* HomePageViewController.h */,
 				2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */,
+				2ECF47F91946641600D53EFB /* TrendingTableViewController.h */,
+				2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -449,6 +457,7 @@
 				2E28FB001944C0B3001B1634 /* facebookIcon.png in Resources */,
 				9AC22BA61946337F00DBBDD0 /* Facebook.png in Resources */,
 				9A3816EA193FA69D000B4E46 /* GoogleMaps.bundle in Resources */,
+				2ECF47F819465F7A00D53EFB /* Wild Fire Logo.png in Resources */,
 				2E5BCFFD1942448700B3446E /* contactsIcon.png in Resources */,
 				9A381691193F7FF3000B4E46 /* Images.xcassets in Resources */,
 				2E489660194601CD002584BB /* WildFire.png in Resources */,
@@ -474,7 +483,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5BCFF619422CAB00B3446E /* InviteFriendsCell.m in Sources */,
 				9AC22BA31946248E00DBBDD0 /* UIImage+ResizeAdditions.m in Sources */,
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
@@ -487,8 +495,10 @@
 				2E4896631946027B002584BB /* CameraViewController.m in Sources */,
 				9A3816CB193F87F5000B4E46 /* MapView.m in Sources */,
 				2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */,
+				2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */,
 				2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */,
 				2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */,
+				2ECF47FB1946641600D53EFB /* TrendingTableViewController.m in Sources */,
 				9A381682193F7FF3000B4E46 /* main.m in Sources */,
 				2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */,
 				2E90976F194633B4003BF5A4 /* PhotoViewController.m in Sources */,
