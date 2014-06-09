@@ -19,7 +19,7 @@
 #pragma mark - Pop Up Message
 +(void)popUpMessage:(NSString*)message
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Eventap" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"WildFIRE" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alert show];
 }
 
