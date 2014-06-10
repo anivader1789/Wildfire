@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "SettingsTableViewCell.h"
 
 @interface SettingsViewController ()
 
@@ -27,6 +28,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Invite friends Table loaded");
+    static NSString *CellIdentifier = @"TableCell";
+    SettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    int row = [indexPath row];
+    
+    cell.Title.text = @"HERE";
+    //_Title[row];
+    cell.UserInfo.text = @"THERE";
+    //_UserInfo[row];
+    cell.Switch.hidden = YES;
+    cell.Arrow.image = [UIImage imageNamed: @"rightArrow.png"];
+    
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning

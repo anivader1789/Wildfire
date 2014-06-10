@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */; };
 		2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */; };
 		2E28FAFE1944BEEC001B1634 /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFD1944BEEC001B1634 /* rightArrow.png */; };
 		2E28FB001944C0B3001B1634 /* facebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFF1944C0B3001B1634 /* facebookIcon.png */; };
@@ -85,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E00CD5519478FA700EA8D2F /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
+		2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
 		2E28FAFA1944BB04001B1634 /* InviteFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsTableViewController.h; sourceTree = "<group>"; };
 		2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsTableViewController.m; sourceTree = "<group>"; };
 		2E28FAFD1944BEEC001B1634 /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
@@ -357,6 +360,8 @@
 				9A6EA36819475C0B00766A72 /* ReceivedFire.m */,
 				9A6EA36A19475C2600766A72 /* Following.h */,
 				9A6EA36B19475C2600766A72 /* Following.m */,
+				2E00CD5519478FA700EA8D2F /* SettingsTableViewCell.h */,
+				2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				2E4896631946027B002584BB /* CameraViewController.m in Sources */,
 				9A3816CB193F87F5000B4E46 /* MapView.m in Sources */,
 				2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */,
+				2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */,
 				2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */,
 				2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */,
 				2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */,
