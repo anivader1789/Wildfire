@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Fire.h"
+#import "ReceivedFire.h"
+#import "Following.h"
+
 
 @implementation AppDelegate
 
@@ -29,6 +33,10 @@
     [defaultACL setPublicReadAccess:YES];
     //[defaultACL setPublicWriteAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+    [Fire registerSubclass];
+    [ReceivedFire registerSubclass];
+    [Following registerSubclass];
     
     
     if (application.applicationState != UIApplicationStateBackground) {

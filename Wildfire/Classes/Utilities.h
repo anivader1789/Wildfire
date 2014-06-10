@@ -16,4 +16,6 @@
 
 + (void)processProfilePictureData:(NSData *)newProfilePictureData;
 
++(BOOL)isExpired:(NSDate*)date;
+
 @end

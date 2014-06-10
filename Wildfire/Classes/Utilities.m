@@ -44,4 +44,15 @@
 }
 
 
++(BOOL)isExpired:(NSDate *)date
+{
+    if ([date timeIntervalSinceNow] > 604800.0) {
+        // Date has passed
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+
 @end

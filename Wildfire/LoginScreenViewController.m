@@ -29,7 +29,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    gestureRecognizer.cancelsTouchesInView = NO; //so that action such as clear text field button can be pressed
+    [self.view addGestureRecognizer:gestureRecognizer];
+
 }
+
+- (void) hideKeyboard {
+    [self.view endEditing:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -70,10 +81,19 @@
 */
 
 - (IBAction)loginButton:(id)sender {
-    
+    [PFUser logInWithUsernameInBackground:_usernameText.text password:_passwordText.text block:^(PFUser *user, NSError *error) {
+        if (!error) {
+            //Login
+            [Utilities popUpMessage:@"Login Success"];
+            
+        } else {
+            [Utilities popUpMessage:@"phone number or password invalid"];
+        }
+    }];
 }
 
 - (IBAction)signUpButton:(id)sender {
+    
 }
 
 

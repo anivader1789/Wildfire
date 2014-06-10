@@ -61,6 +61,9 @@
 		9A3816E8193FA664000B4E46 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3816E7193FA664000B4E46 /* GoogleMaps.framework */; };
 		9A3816EA193FA69D000B4E46 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A3816E9193FA69D000B4E46 /* GoogleMaps.bundle */; };
 		9A3816EC193FB1CC000B4E46 /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3816EB193FB1CC000B4E46 /* iPhoneMain.storyboard */; };
+		9A6EA36619475BE700766A72 /* Fire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36519475BE700766A72 /* Fire.m */; };
+		9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36819475C0B00766A72 /* ReceivedFire.m */; };
+		9A6EA36C19475C2600766A72 /* Following.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36B19475C2600766A72 /* Following.m */; };
 		9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC22B9419460D2300DBBDD0 /* SignUpViewController.m */; };
 		9AC22B981946123B00DBBDD0 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC22B971946123B00DBBDD0 /* Utilities.m */; };
 		9AC22B9B194617BB00DBBDD0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC22B9A194617BB00DBBDD0 /* SettingsViewController.m */; };
@@ -152,6 +155,12 @@
 		9A3816E7193FA664000B4E46 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		9A3816E9193FA69D000B4E46 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		9A3816EB193FB1CC000B4E46 /* iPhoneMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneMain.storyboard; sourceTree = "<group>"; };
+		9A6EA36419475BE700766A72 /* Fire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fire.h; path = Classes/Fire.h; sourceTree = "<group>"; };
+		9A6EA36519475BE700766A72 /* Fire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fire.m; path = Classes/Fire.m; sourceTree = "<group>"; };
+		9A6EA36719475C0B00766A72 /* ReceivedFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivedFire.h; path = Classes/ReceivedFire.h; sourceTree = "<group>"; };
+		9A6EA36819475C0B00766A72 /* ReceivedFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceivedFire.m; path = Classes/ReceivedFire.m; sourceTree = "<group>"; };
+		9A6EA36A19475C2600766A72 /* Following.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Following.h; path = Classes/Following.h; sourceTree = "<group>"; };
+		9A6EA36B19475C2600766A72 /* Following.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Following.m; path = Classes/Following.m; sourceTree = "<group>"; };
 		9AC22B9319460D2300DBBDD0 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = Classes/SignUpViewController.h; sourceTree = "<group>"; };
 		9AC22B9419460D2300DBBDD0 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = Classes/SignUpViewController.m; sourceTree = "<group>"; };
 		9AC22B961946123B00DBBDD0 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = Classes/Utilities.h; sourceTree = "<group>"; };
@@ -342,6 +351,12 @@
 				2E90977119463942003BF5A4 /* InviteFriendsTableViewCell.m */,
 				2ECF47F419465F2E00D53EFB /* TrendingTableViewCell.h */,
 				2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */,
+				9A6EA36419475BE700766A72 /* Fire.h */,
+				9A6EA36519475BE700766A72 /* Fire.m */,
+				9A6EA36719475C0B00766A72 /* ReceivedFire.h */,
+				9A6EA36819475C0B00766A72 /* ReceivedFire.m */,
+				9A6EA36A19475C2600766A72 /* Following.h */,
+				9A6EA36B19475C2600766A72 /* Following.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -487,8 +502,10 @@
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
+				9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */,
 				2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */,
 				9AC22BA41946248E00DBBDD0 /* UIImage+RoundedCornerAdditions.m in Sources */,
+				9A6EA36C19475C2600766A72 /* Following.m in Sources */,
 				9A381686193F7FF3000B4E46 /* AppDelegate.m in Sources */,
 				9AC22B981946123B00DBBDD0 /* Utilities.m in Sources */,
 				2E90977219463942003BF5A4 /* InviteFriendsTableViewCell.m in Sources */,
@@ -504,6 +521,7 @@
 				2E90976F194633B4003BF5A4 /* PhotoViewController.m in Sources */,
 				9AC22B9B194617BB00DBBDD0 /* SettingsViewController.m in Sources */,
 				9AC22B9E194619FF00DBBDD0 /* MBProgressHUD.m in Sources */,
+				9A6EA36619475BE700766A72 /* Fire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
