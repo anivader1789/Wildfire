@@ -9,6 +9,7 @@
 #import "Fire.h"
 
 @implementation Fire
+@dynamic category,fireType,fireURL,originator,locationList,locationOrigin,numOfViews;
 
 
 
@@ -16,6 +17,8 @@
 {
     return @"Fire";
 }
+
+
 
 
 @end

@@ -9,6 +9,7 @@
 #import "LoginScreenViewController.h"
 #import "HomePageViewController.h"
 #import "Utilities.h"
+#import "AppDelegate.h"
 
 @interface LoginScreenViewController ()
 
@@ -88,20 +89,16 @@
         if (!error) {
             //Login
             [Utilities popUpMessage:@"Login Success"];
+            [self.navigationController dismissViewControllerAnimated:NO completion:^{
+                
+            }];
+            [(AppDelegate*)[[UIApplication sharedApplication] delegate] userLogIn];
             
         } else {
             [Utilities popUpMessage:@"phone number or password invalid"];
         }
     }];
-    NSLog(@"Login button pressed");
     
-    if(self.navigationController == nil)NSLog(@"This is NIL");
-    /*HomePageViewController *homePage = [[HomePageViewController alloc]initWithNibName:@"HomePageViewController" bundle:nil];
-    [self.navigationController pushViewController:homePage animated:YES];*/
-    
-    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle: nil];
-    HomePageViewController *homePage = [self.storyboard instantiateViewControllerWithIdentifier:@"HomePage"];
-    [self.navigationController pushViewController:homePage animated:YES];
     
     
 

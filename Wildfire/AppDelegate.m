@@ -11,6 +11,7 @@
 #import "ReceivedFire.h"
 #import "Following.h"
 #import "LoginScreenViewController.h"
+#import "HomePageViewController.h"
 
 @implementation AppDelegate
 
@@ -68,11 +69,16 @@
     
     
     //Jeffs navigational code start.
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];;
-    LoginScreenViewController * newController = [sb instantiateViewControllerWithIdentifier:@"HomePage"];
+    _storyboard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];
+    LoginScreenViewController * loginController = [_storyboard instantiateViewControllerWithIdentifier:@"loginScreen"];
     
-    [self.window setRootViewController:newController];
-    //Jeffs navigational code end.
+    //[self.window setRootViewController:newController];
+    _navController = [[UINavigationController alloc] initWithRootViewController:loginController];
+    
+    self.window.rootViewController = _navController;
+    _navController.navigationBarHidden = YES;
+    [self.window makeKeyAndVisible];
+
     
     
     
@@ -151,5 +157,20 @@
         NSLog(@"ParseStarterProject failed to subscribe to push notifications on the broadcast channel.");
     }
 }
+
+
+#pragma mark
+#pragma mark - log in user
+-(void)userLogIn
+{
+    
+    HomePageViewController *homePage = [_storyboard instantiateViewControllerWithIdentifier:@"HomePage"];;
+     _navController.navigationBarHidden = NO;
+    [_navController pushViewController:homePage animated:NO];
+    
+}
+
+
+
 
 @end

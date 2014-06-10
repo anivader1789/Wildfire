@@ -16,5 +16,9 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) MapView *mapView;
+@property (strong, nonatomic) UIStoryboard *storyboard;
+@property (strong, nonatomic) UINavigationController* navController;
+
+-(void)userLogIn;
 
 @end

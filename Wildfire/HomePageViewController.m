@@ -28,6 +28,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIImage* image3 = [UIImage imageNamed:@"Wild Fire Logo.png"];
+    CGRect frameimg = CGRectMake(0, 0, 15, 15);
+    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+    [someButton addTarget:self.navigationController action:@selector(showMenu)
+         forControlEvents:UIControlEventTouchUpInside];
+    [someButton setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *menubutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.rightBarButtonItem=menubutton;
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
