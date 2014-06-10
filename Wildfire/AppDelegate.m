@@ -67,6 +67,13 @@
     //[self.window makeKeyAndVisible];
     
     
+    //Jeffs navigational code start.
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];;
+    LoginScreenViewController * newController = [sb instantiateViewControllerWithIdentifier:@"HomePage"];
+    
+    [self.window setRootViewController:newController];
+    //Jeffs navigational code end.
+    
     
     
     return YES;
