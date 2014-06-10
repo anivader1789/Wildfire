@@ -1,56 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IsG-EI-YvD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eqA-6x-jzT">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="uht-aR-Foh">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="IsG-EI-YvD" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QRC-qn-9nC">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="eqA-6x-jzT" kind="relationship" relationship="rootViewController" id="780-50-MEu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VeH-ex-TnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-718" y="-221"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="lOp-we-xxM">
-            <objects>
-                <viewController id="Ka6-qA-pMb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K3n-2L-WfT"/>
-                        <viewControllerLayoutGuide type="bottom" id="x1H-gs-1kP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nCt-t6-UWH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pNA-7k-FD8"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lWH-BV-vkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-718" y="-899"/>
-        </scene>
         <!--Invite Friends Table View Controller-->
         <scene sceneID="VGJ-D5-R2j">
             <objects>
                 <tableViewController id="ZmB-NY-lyF" customClass="InviteFriendsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vo7-Cz-QGp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIND FRIENDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Chf-NV-CVW">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="32"/>
                             <color key="textColor" red="0.74492612089999999" green="0.0" blue="0.035099982420000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,7 +22,7 @@
                         </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" rowHeight="90" id="fsZ-do-upq" customClass="InviteFriendsCell">
-                                <rect key="frame" x="0.0" y="130" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fsZ-do-upq" id="6fa-WJ-xkz">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -149,7 +113,7 @@
                         <viewControllerLayoutGuide type="bottom" id="R5S-08-iZo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nQt-Ws-dQJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UE-Pa-lTo">
@@ -163,7 +127,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="eqA-6x-jzT" eventType="touchUpInside" id="Jz7-bJ-yF6"/>
-                                    <segue destination="tb1-U6-uxU" kind="push" identifier="loginHome" id="ueh-Ac-RdP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-5W-X1L">
@@ -177,7 +140,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpButton:" destination="eqA-6x-jzT" eventType="touchUpInside" id="ed9-pd-6qc"/>
-                                    <segue destination="u5H-Ig-xzT" kind="push" id="H2f-xY-QHo"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oFZ-oh-J4A">
@@ -218,11 +180,11 @@
                         <viewControllerLayoutGuide type="bottom" id="JaR-KI-Kgg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hZE-kW-Rhb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="52k-03-HAQ">
-                                <rect key="frame" x="0.0" y="191" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="191" width="320" height="377"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -265,14 +227,14 @@
         <!--Trending Table View Controller - Trending-->
         <scene sceneID="ydc-8C-VoJ">
             <objects>
-                <tableViewController id="Fe1-QM-Dh9" customClass="TrendingTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Trending" id="Fe1-QM-Dh9" customClass="TrendingTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="7kb-yR-O2U">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" rowHeight="66" id="cq3-9M-fN2" customClass="TrendingTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="66"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cq3-9M-fN2" id="8VE-WT-tob">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
@@ -400,7 +362,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dox-0K-6zk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fgL-8t-8ft">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImQ-uo-K12">
@@ -445,7 +407,7 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrL-rY-NZM">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hla-zl-xYy"/>
@@ -458,7 +420,7 @@
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8kt-d4-FEU">
-                                <rect key="frame" x="0.0" y="169" width="320" height="267"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="355"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -485,13 +447,13 @@
         <!--Sign Up View Controller-->
         <scene sceneID="826-VA-Z1e">
             <objects>
-                <viewController id="u5H-Ig-xzT" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="u5H-Ig-xzT" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKy-jh-Dox"/>
                         <viewControllerLayoutGuide type="bottom" id="vzu-HC-eM2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QjU-qt-QYB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-oV-tNe">
@@ -578,38 +540,36 @@
             </objects>
             <point key="canvasLocation" x="-480" y="464"/>
         </scene>
-        <!--Home Page View Controller - Home-->
+        <!--Home Page View Controller - HomePage-->
         <scene sceneID="Gra-fp-jE5">
             <objects>
-                <viewController id="tb1-U6-uxU" customClass="HomePageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePage" title="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tb1-U6-uxU" customClass="HomePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FQc-pu-zhm"/>
                         <viewControllerLayoutGuide type="bottom" id="ZSt-FE-gIE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UWS-pc-qKE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-Nn-hT3">
-                                <rect key="frame" x="0.0" y="65" width="320" height="366"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="390"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuH-fo-XB7">
-                                <rect key="frame" x="0.0" y="431" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="455" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Profile" id="0ED-Uc-pMv">
                                         <connections>
                                             <action selector="profileButton:" destination="tb1-U6-uxU" id="fiM-Y8-H1V"/>
-                                            <segue destination="cyM-z6-NvF" kind="push" id="m7O-9z-wZT"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Ai-8N-Jxr"/>
                                     <barButtonItem title="Trending" id="9hK-7S-qwl">
                                         <connections>
                                             <action selector="trendingButton:" destination="tb1-U6-uxU" id="99F-yq-gGa"/>
-                                            <segue destination="Fe1-QM-Dh9" kind="push" id="iNX-dn-U2L"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hR3-GN-GAN"/>
@@ -641,7 +601,8 @@
                         <barButtonItem title="Camera" id="dZV-ae-tFj"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Home" id="NkA-dj-VVb"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="listOfFiresTableView" destination="VUV-Nn-hT3" id="7UC-8H-Qw6"/>
                     </connections>
@@ -742,7 +703,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rbu-pz-5bT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NX6-aB-oSp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-dd-NYK">

@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+<<<<<<< HEAD
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     gestureRecognizer.cancelsTouchesInView = NO; //so that action such as clear text field button can be pressed
     [self.view addGestureRecognizer:gestureRecognizer];
@@ -42,6 +43,11 @@
 
 
 
+=======
+}
+
+
+>>>>>>> FETCH_HEAD
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -80,7 +86,9 @@
 }
 */
 
+
 - (IBAction)loginButton:(id)sender {
+<<<<<<< HEAD
     [PFUser logInWithUsernameInBackground:_usernameText.text password:_passwordText.text block:^(PFUser *user, NSError *error) {
         if (!error) {
             //Login
@@ -90,6 +98,19 @@
             [Utilities popUpMessage:@"phone number or password invalid"];
         }
     }];
+=======
+    NSLog(@"Login button pressed");
+    
+    if(self.navigationController == nil)NSLog(@"This is NIL");
+    /*HomePageViewController *homePage = [[HomePageViewController alloc]initWithNibName:@"HomePageViewController" bundle:nil];
+    [self.navigationController pushViewController:homePage animated:YES];*/
+    
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle: nil];
+    HomePageViewController *homePage = [self.storyboard instantiateViewControllerWithIdentifier:@"HomePage"];
+    [self.navigationController pushViewController:homePage animated:YES];
+    
+    
+>>>>>>> FETCH_HEAD
 }
 
 - (IBAction)signUpButton:(id)sender {

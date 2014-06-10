@@ -21,4 +21,6 @@
 //Table View
 @property (strong, nonatomic) IBOutlet UITableView *listOfFiresTableView;
 
+
+
 @end
