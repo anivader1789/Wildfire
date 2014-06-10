@@ -107,7 +107,7 @@
         <!--Login Screen View Controller-->
         <scene sceneID="uST-xf-vpc">
             <objects>
-                <viewController id="eqA-6x-jzT" customClass="LoginScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="eqA-6x-jzT" customClass="LoginScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aeR-h0-yGX"/>
                         <viewControllerLayoutGuide type="bottom" id="R5S-08-iZo"/>

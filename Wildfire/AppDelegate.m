@@ -7,14 +7,10 @@
 //
 
 #import "AppDelegate.h"
-<<<<<<< HEAD
 #import "Fire.h"
 #import "ReceivedFire.h"
 #import "Following.h"
-
-=======
 #import "LoginScreenViewController.h"
->>>>>>> FETCH_HEAD
 
 @implementation AppDelegate
 
@@ -22,7 +18,7 @@
 {
     //Override point for customization after application launch.
     
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   // self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     
     [GMSServices provideAPIKey:@"AIzaSyAn67_hB7ArE1ZwVhoIzgRDsVxK0IBWV6E"];
@@ -70,13 +66,6 @@
     //self.window.rootViewController = self.mapView;
     //[self.window makeKeyAndVisible];
     
-    
-    //Jeffs navigational code start.
-    UINavigationController *navVC = [[UINavigationController alloc]init];
-    LoginScreenViewController *VC1 = [[LoginScreenViewController alloc]init];
-    [navVC setViewControllers:[NSArray arrayWithObject:VC1]];
-    [self.window setRootViewController:navVC];
-    //Jeffs navigational code end.
     
     
     
