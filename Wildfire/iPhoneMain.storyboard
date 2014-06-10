@@ -107,11 +107,7 @@
         <!--Login Screen View Controller-->
         <scene sceneID="uST-xf-vpc">
             <objects>
-<<<<<<< HEAD
-                <viewController storyboardIdentifier="Login" id="eqA-6x-jzT" customClass="LoginScreenViewController" sceneMemberID="viewController">
-=======
                 <viewController storyboardIdentifier="loginScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eqA-6x-jzT" customClass="LoginScreenViewController" sceneMemberID="viewController">
->>>>>>> FETCH_HEAD
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aeR-h0-yGX"/>
                         <viewControllerLayoutGuide type="bottom" id="R5S-08-iZo"/>
