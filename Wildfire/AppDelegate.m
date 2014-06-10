@@ -7,14 +7,10 @@
 //
 
 #import "AppDelegate.h"
-<<<<<<< HEAD
 #import "Fire.h"
 #import "ReceivedFire.h"
 #import "Following.h"
-
-=======
 #import "LoginScreenViewController.h"
->>>>>>> FETCH_HEAD
 
 @implementation AppDelegate
 
@@ -72,10 +68,10 @@
     
     
     //Jeffs navigational code start.
-    UINavigationController *navVC = [[UINavigationController alloc]init];
-    LoginScreenViewController *VC1 = [[LoginScreenViewController alloc]init];
-    [navVC setViewControllers:[NSArray arrayWithObject:VC1]];
-    [self.window setRootViewController:navVC];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];;
+    LoginScreenViewController * newController = [sb instantiateViewControllerWithIdentifier:@"HomePage"];
+    
+    [self.window setRootViewController:newController];
     //Jeffs navigational code end.
     
     
