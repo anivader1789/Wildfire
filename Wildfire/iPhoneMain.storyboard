@@ -504,7 +504,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="826-VA-Z1e">
             <objects>
-                <viewController storyboardIdentifier="SignUp" id="u5H-Ig-xzT" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u5H-Ig-xzT" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKy-jh-Dox"/>
                         <viewControllerLayoutGuide type="bottom" id="vzu-HC-eM2"/>
@@ -610,9 +610,35 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-Nn-hT3">
-                                <rect key="frame" x="0.0" y="65" width="320" height="390"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FX5-qK-XIB" customClass="FireTableCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FX5-qK-XIB" id="QDE-fo-WkZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wild Fire Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tog-iG-h2v">
+                                                    <rect key="frame" x="6" y="0.0" width="47" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fire" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npt-sj-TxL">
+                                                    <rect key="frame" x="73" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tb1-U6-uxU" id="dLR-VK-6ks"/>
+                                    <outlet property="delegate" destination="tb1-U6-uxU" id="3Q8-fd-QZi"/>
+                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuH-fo-XB7">
                                 <rect key="frame" x="0.0" y="455" width="320" height="44"/>
@@ -661,7 +687,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="listOfFiresTableView" destination="VUV-Nn-hT3" id="7UC-8H-Qw6"/>
+                        <outlet property="listOfFiresTableView" destination="VUV-Nn-hT3" id="R0t-eE-AdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJX-Dt-y5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -754,6 +780,7 @@
     </scenes>
     <resources>
         <image name="Facebook.png" width="25" height="25"/>
+        <image name="Wild Fire Logo.png" width="428" height="595"/>
         <image name="WildFire.png" width="722" height="159"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

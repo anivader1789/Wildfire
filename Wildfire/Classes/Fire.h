@@ -38,8 +38,8 @@ typedef enum{
 @interface Fire : PFObject <PFSubclassing>
 
 
-@property (nonatomic) Category *category;
-@property (nonatomic) FireType *fireType;
+@property int category;
+@property int fireType;
 @property (strong, nonatomic) PFGeoPoint *locationList;
 @property (strong, nonatomic) PFGeoPoint *locationOrigin;
 @property (strong, nonatomic) PFUser *originator;

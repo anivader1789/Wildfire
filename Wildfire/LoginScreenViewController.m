@@ -106,7 +106,8 @@
 }
 
 - (IBAction)signUpButton:(id)sender {
-    SignUpViewController * signupController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginScreen"];
+    SignUpViewController * signupController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupScreen"];
+    self.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:signupController animated:NO];
 }
 

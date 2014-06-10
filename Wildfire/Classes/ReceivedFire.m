@@ -16,7 +16,7 @@
 
 +(NSString*)parseClassName
 {
-    return @"ReceivedFire";
+    return @"ReceivedFires";
 }
 
 
@@ -24,17 +24,19 @@
 {
     PFQuery* query = [ReceivedFire query];
     
-    [query whereKey:@"Receiver" equalTo:[PFUser currentUser]];
+    [query whereKey:@"receiver" equalTo:[PFUser currentUser]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
+             NSLog(@"received fires %d",objects.count);
             if(objects.count > 0){
                 NSMutableArray* results = [[NSMutableArray alloc] init];
                 for(int i=0;i<objects.count;i++){
-                    if([Utilities isExpired:[[objects objectAtIndex:i] objectForKey:@"createdAt"]]){
-                        [results addObject:[[objects objectAtIndex:i] objectForKey:@"Fire"]];
-                    }
+                    //if([Utilities isExpired:[[objects objectAtIndex:i] objectForKey:@"createdAt"]]){
+                        [results addObject:[[objects objectAtIndex:i] objectForKey:@"fire"]];
+                    //}
                 }
+                NSLog(@"fires %d",results.count);
                 completionBlock(results,NULL);
             }
         }
