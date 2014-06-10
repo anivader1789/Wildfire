@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginScreenViewController.h"
 
 @implementation AppDelegate
 
@@ -57,6 +58,14 @@
     //Set root view controller
     //self.window.rootViewController = self.mapView;
     //[self.window makeKeyAndVisible];
+    
+    
+    //Jeffs navigational code start.
+    UINavigationController *navVC = [[UINavigationController alloc]init];
+    LoginScreenViewController *VC1 = [[LoginScreenViewController alloc]init];
+    [navVC setViewControllers:[NSArray arrayWithObject:VC1]];
+    [self.window setRootViewController:navVC];
+    //Jeffs navigational code end.
     
     
     

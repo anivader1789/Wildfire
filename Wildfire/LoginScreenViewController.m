@@ -29,7 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -69,7 +71,18 @@
 }
 */
 
+
 - (IBAction)loginButton:(id)sender {
+    NSLog(@"Login button pressed");
+    
+    if(self.navigationController == nil)NSLog(@"This is NIL");
+    /*HomePageViewController *homePage = [[HomePageViewController alloc]initWithNibName:@"HomePageViewController" bundle:nil];
+    [self.navigationController pushViewController:homePage animated:YES];*/
+    
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle: nil];
+    HomePageViewController *homePage = [self.storyboard instantiateViewControllerWithIdentifier:@"HomePage"];
+    [self.navigationController pushViewController:homePage animated:YES];
+    
     
 }
 
