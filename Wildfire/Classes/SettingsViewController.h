@@ -9,12 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    
+    NSMutableArray *dataArray;
+
+}
 
 - (IBAction)signoutButton:(id)sender;
 
 @property(nonatomic,strong)NSArray *Arrow;
 @property(nonatomic,strong)NSArray *Title;
 @property(nonatomic,strong)NSArray *UserInfo;
+
 
 @end
