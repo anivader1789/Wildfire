@@ -46,4 +46,16 @@
 }
 */
 
+- (IBAction)signoutButton:(id)sender {
+    NSLog(@"Logging out user");
+    
+    //Clear all cached results
+    [PFQuery clearAllCachedResults];
+    
+    //Log out
+    [PFUser logOut];
+    PFUser *user = [PFUser currentUser];
+    NSLog(@"%@", user);
+    [[FBSession activeSession] closeAndClearTokenInformation];
+}
 @end

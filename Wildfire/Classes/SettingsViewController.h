@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SettingsViewController : UIViewController
+- (IBAction)signoutButton:(id)sender;
 
 @end

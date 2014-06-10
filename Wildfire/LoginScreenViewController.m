@@ -7,6 +7,8 @@
 //
 
 #import "LoginScreenViewController.h"
+#import "HomePageViewController.h"
+#import "Utilities.h"
 
 @interface LoginScreenViewController ()
 
@@ -35,20 +37,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"loginHome"]) {
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        
+        //destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+    }
+
 }
-*/
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    bool result = true;
+    
+    if ([identifier isEqualToString:@"loginHome"]) {
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        [Utilities popUpMessage:@"Cant go there yet"];
+        result = false;
+        
+    }
+
+    return result;
+}
+
 
 - (IBAction)loginButton:(id)sender {
+    
 }
 
 - (IBAction)signUpButton:(id)sender {
 }
+
+
+
+
 @end

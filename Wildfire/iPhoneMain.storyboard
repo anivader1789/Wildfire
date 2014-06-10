@@ -163,7 +163,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="eqA-6x-jzT" eventType="touchUpInside" id="Jz7-bJ-yF6"/>
-                                    <segue destination="tb1-U6-uxU" kind="push" id="XCv-Oj-2Ap"/>
+                                    <segue destination="tb1-U6-uxU" kind="push" identifier="loginHome" id="ueh-Ac-RdP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-5W-X1L">
@@ -744,6 +744,16 @@
                     <view key="view" contentMode="scaleToFill" id="NX6-aB-oSp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-dd-NYK">
+                                <rect key="frame" x="110" y="134" width="100" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signoutButton:" destination="PF9-gP-rgp" eventType="touchUpInside" id="jds-TY-Khf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="C1i-Vd-XDa"/>
