@@ -52,6 +52,7 @@
 
 }
 
+/*
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     bool result = true;
@@ -66,7 +67,7 @@
 
     return result;
 }
-
+*/
 
 - (IBAction)loginButton:(id)sender {
     
