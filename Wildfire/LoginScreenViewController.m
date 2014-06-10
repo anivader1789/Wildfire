@@ -8,6 +8,7 @@
 
 #import "LoginScreenViewController.h"
 #import "HomePageViewController.h"
+#import "SignUpViewController.h"
 #import "Utilities.h"
 #import "AppDelegate.h"
 
@@ -105,7 +106,8 @@
 }
 
 - (IBAction)signUpButton:(id)sender {
-    
+    SignUpViewController *signUpController = [self.storyboard instantiateViewControllerWithIdentifier:@"signUpScreen"];
+    [self.navigationController pushViewController:signUpController animated:NO];
 }
 
 

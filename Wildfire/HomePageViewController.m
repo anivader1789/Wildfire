@@ -7,6 +7,7 @@
 //
 
 #import "HomePageViewController.h"
+#import "SettingsViewController.h"
 
 @interface HomePageViewController ()
 
@@ -83,6 +84,8 @@
 }
 
 - (IBAction)settingsButton:(id)sender {
+    SettingsViewController *settingsController = [self.storyboard instantiateViewControllerWithIdentifier:@"settingsScreen"];
+    [self.navigationController pushViewController:settingsController animated:NO];
 }
 
 /*#pragma mark

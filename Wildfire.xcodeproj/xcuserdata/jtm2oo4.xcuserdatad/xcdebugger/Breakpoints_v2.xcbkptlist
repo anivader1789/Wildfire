@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Wildfire/HomePageViewController.m"
-            timestampString = "424106186.03339"
+            timestampString = "424123038.500548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "@implementation HomePageViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -38,17 +38,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Wildfire/HomePageViewController.m"
-            timestampString = "424106186.03339"
+            timestampString = "424123038.500548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "@implementation HomePageViewController"
-            landmarkType = "3">
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-cameraButton:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -73,7 +73,7 @@
                   symbolName = "-[TrendingTableViewController filterButtonPressed]"
                   moduleName = "Wildfire"
                   urlString = "file:///Users/jtm2oo4/Desktop/Wildfire/Wildfire/TrendingTableViewController.h"
-                  timestampString = "424118571.98666"
+                  timestampString = "424123222.865382"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -87,7 +87,7 @@
                   symbolName = "-[TrendingTableViewController setFilterButtonPressed:]"
                   moduleName = "Wildfire"
                   urlString = "file:///Users/jtm2oo4/Desktop/Wildfire/Wildfire/TrendingTableViewController.h"
-                  timestampString = "424118571.986856"
+                  timestampString = "424123222.865573"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"

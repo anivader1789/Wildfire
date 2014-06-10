@@ -174,7 +174,7 @@
         <!--Settings View Controller - Settings-->
         <scene sceneID="F6F-PL-ffT">
             <objects>
-                <viewController title="Settings" id="tU2-bT-By3" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsScreen" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tU2-bT-By3" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AsR-A5-MHN"/>
                         <viewControllerLayoutGuide type="bottom" id="de9-oW-Jf4"/>
@@ -504,7 +504,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="826-VA-Z1e">
             <objects>
-                <viewController storyboardIdentifier="SignUp" id="u5H-Ig-xzT" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u5H-Ig-xzT" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKy-jh-Dox"/>
                         <viewControllerLayoutGuide type="bottom" id="vzu-HC-eM2"/>
