@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SVPullToRefresh.h"
 
-@interface HomePageViewController : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UITableViewDataSource, UITableViewDelegate>
+@interface HomePageViewController : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UITableViewDataSource, UITableViewDelegate>{
+    
+}
 
 @property (strong, nonatomic) NSData *imageData;
 @property (strong,nonatomic) NSMutableArray *fires;
@@ -22,6 +24,7 @@
 
 //Table View
 @property (strong, nonatomic) IBOutlet UITableView *listOfFiresTableView;
+@property (strong, nonatomic) NSMutableArray *followers;
 
 
 

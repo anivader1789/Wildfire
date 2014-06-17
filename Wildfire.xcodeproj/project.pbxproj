@@ -62,6 +62,8 @@
 		9A3816E8193FA664000B4E46 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3816E7193FA664000B4E46 /* GoogleMaps.framework */; };
 		9A3816EA193FA69D000B4E46 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A3816E9193FA69D000B4E46 /* GoogleMaps.bundle */; };
 		9A3816EC193FB1CC000B4E46 /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3816EB193FB1CC000B4E46 /* iPhoneMain.storyboard */; };
+		9A44AA571950927B000121ED /* SearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44AA561950927B000121ED /* SearchUserViewController.m */; };
+		9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44AA59195093BB000121ED /* SearchUserTableCell.m */; };
 		9A6EA36619475BE700766A72 /* Fire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36519475BE700766A72 /* Fire.m */; };
 		9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36819475C0B00766A72 /* ReceivedFire.m */; };
 		9A6EA36C19475C2600766A72 /* Following.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36B19475C2600766A72 /* Following.m */; };
@@ -161,6 +163,10 @@
 		9A3816E7193FA664000B4E46 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		9A3816E9193FA69D000B4E46 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		9A3816EB193FB1CC000B4E46 /* iPhoneMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneMain.storyboard; sourceTree = "<group>"; };
+		9A44AA551950927B000121ED /* SearchUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchUserViewController.h; path = Classes/SearchUserViewController.h; sourceTree = "<group>"; };
+		9A44AA561950927B000121ED /* SearchUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchUserViewController.m; path = Classes/SearchUserViewController.m; sourceTree = "<group>"; };
+		9A44AA58195093BB000121ED /* SearchUserTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchUserTableCell.h; path = Classes/SearchUserTableCell.h; sourceTree = "<group>"; };
+		9A44AA59195093BB000121ED /* SearchUserTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchUserTableCell.m; path = Classes/SearchUserTableCell.m; sourceTree = "<group>"; };
 		9A6EA36419475BE700766A72 /* Fire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fire.h; path = Classes/Fire.h; sourceTree = "<group>"; };
 		9A6EA36519475BE700766A72 /* Fire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fire.m; path = Classes/Fire.m; sourceTree = "<group>"; };
 		9A6EA36719475C0B00766A72 /* ReceivedFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivedFire.h; path = Classes/ReceivedFire.h; sourceTree = "<group>"; };
@@ -350,6 +356,8 @@
 		9A3816AD193F8010000B4E46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9A44AA58195093BB000121ED /* SearchUserTableCell.h */,
+				9A44AA59195093BB000121ED /* SearchUserTableCell.m */,
 				9AB2B5FE1947B427002DB3D7 /* SVPullToRefresh.h */,
 				9AB2B5FF1947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.h */,
 				9AB2B6001947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m */,
@@ -411,6 +419,8 @@
 				2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */,
 				2ECF47F91946641600D53EFB /* TrendingTableViewController.h */,
 				2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */,
+				9A44AA551950927B000121ED /* SearchUserViewController.h */,
+				9A44AA561950927B000121ED /* SearchUserViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -523,6 +533,7 @@
 				9AC22BA31946248E00DBBDD0 /* UIImage+ResizeAdditions.m in Sources */,
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
+				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
 				9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */,
 				2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */,
@@ -535,6 +546,7 @@
 				2E4896631946027B002584BB /* CameraViewController.m in Sources */,
 				9AB2B5FD1947A6D0002DB3D7 /* FireTableCell.m in Sources */,
 				9A3816CB193F87F5000B4E46 /* MapView.m in Sources */,
+				9A44AA571950927B000121ED /* SearchUserViewController.m in Sources */,
 				2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */,
 				2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */,
 				2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */,

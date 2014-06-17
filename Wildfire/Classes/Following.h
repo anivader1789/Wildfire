@@ -11,10 +11,12 @@
 
 @interface Following : PFObject <PFSubclassing>
 
-@property (strong, nonatomic) PFUser *follower;
-@property (strong, nonatomic) PFUser *followed;
+@property (strong, nonatomic) PFUser *Follower;
+@property (strong, nonatomic) PFUser *Followed;
 @property bool followBack;
 
 +(NSString*)parseClassName;
++(void)getAllFollowees:(void (^)(NSArray *, NSError *))completionBlock;
++(void)getAllFollowers:(void (^)(NSArray *, NSError *))completionBlock;
 
 @end

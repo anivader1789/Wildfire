@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Wildfire/HomePageViewController.m"
-            timestampString = "424130003.826802"
+            timestampString = "424730707.089752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "-updateFiresDataSource"
             landmarkType = "5">
          </BreakpointContent>

@@ -11,6 +11,8 @@
 #import "ReceivedFire.h"
 #import "Utilities.h"
 #import "FireTableCell.h"
+#import "ProfilePageViewController.h"
+#import "Following.h"
 
 
 @interface HomePageViewController ()
@@ -18,6 +20,8 @@
 @end
 
 @implementation HomePageViewController
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +53,8 @@
     self.navigationItem.hidesBackButton = YES;
     
     [self updateFiresDataSource];
+    [self reloadFollowees];
+    
     [_listOfFiresTableView reloadData];
     //Setup pull to refresh
     id weakSelf = self;
@@ -57,10 +63,30 @@
     }];
 }
 
+-(void) reloadFollowees
+{
+    if(!_followers){
+        _followers = [[NSMutableArray alloc] init];
+    }
+    
+    
+    [Following getAllFollowers:^(NSArray *objects, NSError *error) {
+        if(!error){
+            @synchronized(_followers){
+                [_followers removeAllObjects];
+                [_followers addObjectsFromArray:objects];
+                
+                
+            }
+        }
+    }];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [self updateFiresDataSource];
     [_listOfFiresTableView reloadData];
+    [self reloadFollowees];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -80,6 +106,13 @@
 */
 
 - (IBAction)profileButton:(id)sender {
+    
+    
+    
+    ProfilePageViewController * profilePage = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfilePage"];
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController pushViewController:profilePage animated:NO];
+    
 }
 
 - (IBAction)trendingButton:(id)sender {
@@ -119,48 +152,35 @@
                 [newFire setObject:[PFUser currentUser] forKey:@"Originator"];
                 //[newFire setObject:1 forKey:@"NumberOfViews"];
                 NSLog(@"Fine till here");
-                ReceivedFire *recvFire = [ReceivedFire object];
-            
-                PFQuery *userQuery = [PFUser query];
-                //[userQuery whereKey:@"objectId" equalTo:@"xmYIG1TsKa"];
-            
-                PFUser *recver = (PFUser*)[userQuery getObjectWithId:@"xmYIG1TsKa"];
-            
-                recvFire.receiver = recver;
-                recvFire.fire = newFire;
                 
-                [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    if(succeeded){
-                        [newFire setObject:recver forKey:@"Receiver"];
-                        [newFire setObject:newFire forKey:@"Fire"];
-                        NSLog(@"Save success");
+                for(PFUser *follower in _followers){
+                    ReceivedFire *recvFire = [ReceivedFire object];
+            
+                    //PFQuery *userQuery = [PFUser query];
+                    //[userQuery whereKey:@"objectId" equalTo:@"xmYIG1TsKa"];
+            
+                    PFUser *recver = follower;
+            
+                    recvFire.receiver = recver;
+                    recvFire.fire = newFire;
+                
+                    [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if(succeeded){
+                            [newFire setObject:recver forKey:@"Receiver"];
+                            [newFire setObject:newFire forKey:@"Fire"];
+                            //[Utilities popUpMessage:[NSString stringWithFormat:@"Created a fire and sent to %@",followee.username]];
+                            [Utilities popUpMessage:@"Fire sent!!"];
+                            NSLog(@"Save success");
                         
-                    }
-                    else{
-                        NSLog(@"Save failed");
-                    }
-                }];
+                        }
+                        else{
+                            NSLog(@"Save failed");
+                        }
+                    }];
                 
-                ReceivedFire *recvFire1 = [ReceivedFire object];
-                
-                
-                
-                recvFire1.receiver = [PFUser currentUser];
-                recvFire1.fire = newFire;
-                
-                [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    if(succeeded){
-                        [newFire setObject:[PFUser currentUser] forKey:@"Receiver"];
-                        [newFire setObject:newFire forKey:@"Fire"];
-                        NSLog(@"Save success");
-                        
-                    }
-                    else{
-                        NSLog(@"Save failed");
-                    }
-                }];
+                }
             
-                [Utilities popUpMessage:@"Created a fire and sent to Jason"];
+                
             }
         }
         else{
