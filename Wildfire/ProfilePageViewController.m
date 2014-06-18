@@ -7,6 +7,8 @@
 //
 
 #import "ProfilePageViewController.h"
+#import "InviteFriendsTableViewController.h"
+#import "SearchUserViewController.h"
 
 @interface ProfilePageViewController ()
 
@@ -27,12 +29,31 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIImage* image3 = [UIImage imageNamed:@"Wild Fire Logo.png"];
+    CGRect frameimg = CGRectMake(0, 0, 15, 15);
+    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+    [someButton addTarget:self action:@selector(inviteFriends)
+         forControlEvents:UIControlEventTouchUpInside];
+    [someButton setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *menubutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.rightBarButtonItem=menubutton;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)inviteFriends
+{
+    SearchUserViewController* invitePage = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchUser"];
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController pushViewController:invitePage animated:NO];
+
 }
 
 /*

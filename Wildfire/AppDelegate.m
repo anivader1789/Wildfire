@@ -32,7 +32,7 @@
     
     //Enable public read access while disabling public write access.
     [defaultACL setPublicReadAccess:YES];
-    //[defaultACL setPublicWriteAccess:YES];
+    [defaultACL setPublicWriteAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     [Fire registerSubclass];
