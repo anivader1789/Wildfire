@@ -11,15 +11,13 @@
 
 @interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     
-    NSMutableArray *dataArray;
+    NSMutableArray *titleArray;
+    NSMutableArray *rightImageArray;
+    NSMutableArray *descriptionArray;
 
 }
 
 - (IBAction)signoutButton:(id)sender;
-
-@property(nonatomic,strong)NSArray *Arrow;
-@property(nonatomic,strong)NSArray *Title;
-@property(nonatomic,strong)NSArray *UserInfo;
 
 
 @end

@@ -18,5 +18,6 @@
 
 
 +(NSString*)parseClassName;
++(void)getAllLiveFires:(void (^)(NSArray *, NSError *))completionBlock;
 
 @end

@@ -30,49 +30,49 @@
     // Do any additional setup after loading the view.
     
     //Initialize the dataArray
-    dataArray = [[NSMutableArray alloc] init];
+    titleArray = [[NSMutableArray alloc] init];
     
     //First section data
-    NSArray *firstItemsArray = [[NSArray alloc] initWithObjects:@"Username",@"Mobile Number",@"Email",@"Notification Sounds",nil];
-    NSDictionary *firstItemsArrayDict = [NSDictionary dictionaryWithObject:firstItemsArray forKey:@"data"];
-    [dataArray addObject:firstItemsArrayDict];
+    NSArray *firstItemsArray = [[NSArray alloc] initWithObjects:@"Username",@"Mobile Number",@"Email",@"Push Notification",@"In App Notifications",@"GPS Location",nil];
+    NSDictionary *firstItemsArrayDict = [NSDictionary dictionaryWithObject:firstItemsArray forKey:@"title"];
+    [titleArray addObject:firstItemsArrayDict];
     
     //Second section data
-    NSArray *secondItemsArray = [[NSArray alloc] initWithObjects:@"Manage",nil];
-    NSDictionary *secondItemsArrayDict = [NSDictionary dictionaryWithObject:secondItemsArray forKey:@"data"];
-    [dataArray addObject:secondItemsArrayDict];
+    NSArray *secondItemsArray = [[NSArray alloc] initWithObjects:@"FaceBook",@"Instagram",@"Twitter",nil];
+    NSDictionary *secondItemsArrayDict = [NSDictionary dictionaryWithObject:secondItemsArray forKey:@"title"];
+    [titleArray addObject:secondItemsArrayDict];
     
-    //Second section data
-    NSArray *thirdItemsArray = [[NSArray alloc] initWithObjects:@"See Fires", @"View My Profile",nil];
-    NSDictionary *thirdItemsArrayDict = [NSDictionary dictionaryWithObject:thirdItemsArray forKey:@"data"];
-    [dataArray addObject:thirdItemsArrayDict];
+    //Third section data
+    NSArray *thirdItemsArray = [[NSArray alloc] initWithObjects:@"See Fires Spread", @"View My Profile",nil];
+    NSDictionary *thirdItemsArrayDict = [NSDictionary dictionaryWithObject:thirdItemsArray forKey:@"title"];
+    [titleArray addObject:thirdItemsArrayDict];
     
-    //Second section data
-    NSArray *fourthItemsArray = [[NSArray alloc] initWithObjects:@"Support", @"Privacy Policy", @"Terms of Use",nil];
-    NSDictionary *fourthItemsArrayDict = [NSDictionary dictionaryWithObject:fourthItemsArray forKey:@"data"];
-    [dataArray addObject:fourthItemsArrayDict];
+    //Fourth section data
+    NSArray *fourthItemsArray = [[NSArray alloc] initWithObjects:@"Help Center",@"Report a Problem", @"Privacy Policy", @"Terms of Use",@"Block People",nil];
+    NSDictionary *fourthItemsArrayDict = [NSDictionary dictionaryWithObject:fourthItemsArray forKey:@"title"];
+    [titleArray addObject:fourthItemsArrayDict];
     
-    //Second section data
+    //Fifth section data
     NSArray *fifthItemsArray = [[NSArray alloc] initWithObjects:@"Clear Fires",nil];
-    NSDictionary *fifthItemsArrayDict = [NSDictionary dictionaryWithObject:fifthItemsArray forKey:@"data"];
-    [dataArray addObject:fifthItemsArrayDict];
+    NSDictionary *fifthItemsArrayDict = [NSDictionary dictionaryWithObject:fifthItemsArray forKey:@"title"];
+    [titleArray addObject:fifthItemsArrayDict];
     
-    //Second section data
-    NSArray *sixthItemsArray = [[NSArray alloc] initWithObjects:@"Log Out",nil];
-    NSDictionary *sixthItemsArrayDict = [NSDictionary dictionaryWithObject:sixthItemsArray forKey:@"data"];
-    [dataArray addObject:sixthItemsArrayDict];
+    //Sixth section data
+    NSArray *sixthItemsArray = [[NSArray alloc] initWithObjects:@"Wild Fire",@"Facebook",@"Instagram",@"Twitter",nil];
+    NSDictionary *sixthItemsArrayDict = [NSDictionary dictionaryWithObject:sixthItemsArray forKey:@"title"];
+    [titleArray addObject:sixthItemsArrayDict];
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [dataArray count];
+    return [titleArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //Number of rows it should expect should be based on the section
-    NSDictionary *dictionary = [dataArray objectAtIndex:section];
-    NSArray *array = [dictionary objectForKey:@"data"];
+    NSDictionary *dictionary = [titleArray objectAtIndex:section];
+    NSArray *array = [dictionary objectForKey:@"title"];
     return [array count];
 }
 
@@ -89,7 +89,7 @@
     else if(section == 4)
         return @"ACCOUNT ACTIONS";
     else if(section == 5)
-        return @"LOG OUT";
+        return @"LOG OUT OF...";
     else return @"";
 }
 
@@ -106,9 +106,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    NSDictionary *dictionary = [dataArray objectAtIndex:indexPath.section];
-    NSArray *array = [dictionary objectForKey:@"data"];
-    NSString *cellValue = [array objectAtIndex:indexPath.row];
+    NSDictionary *dictionary = [titleArray objectAtIndex:indexPath.section];
+    NSArray *titleArray = [dictionary objectForKey:@"title"];
+    NSString *cellValue = [titleArray objectAtIndex:indexPath.row];
     cell.textLabel.text = cellValue;
     
     return cell;

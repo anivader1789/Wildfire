@@ -84,7 +84,8 @@
     
     return YES;
 }
-							
+
+/*
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
     [PFPush storeDeviceToken:newDeviceToken];
     [PFPush subscribeToChannelInBackground:@"" target:self selector:@selector(subscribeFinished:error:)];
@@ -112,6 +113,8 @@
         [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
     }
 }
+
+ */
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*

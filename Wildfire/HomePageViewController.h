@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SVPullToRefresh.h"
 
-@interface HomePageViewController : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate>
+@interface HomePageViewController : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSData *imageData;
+@property (strong,nonatomic) NSMutableArray *fires;
 
 //Buttons
 - (IBAction)profileButton:(id)sender;

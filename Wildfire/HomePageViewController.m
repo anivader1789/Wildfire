@@ -8,6 +8,10 @@
 
 #import "HomePageViewController.h"
 #import "SettingsViewController.h"
+#import "Fire.h"
+#import "ReceivedFire.h"
+#import "Utilities.h"
+#import "FireTableCell.h"
 
 @interface HomePageViewController ()
 
@@ -30,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSLog(@"Current user: %@",[PFUser currentUser].objectId);
+    
     UIImage* image3 = [UIImage imageNamed:@"Wild Fire Logo.png"];
     CGRect frameimg = CGRectMake(0, 0, 15, 15);
     UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
@@ -41,8 +47,21 @@
     UIBarButtonItem *menubutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
     self.navigationItem.rightBarButtonItem=menubutton;
     self.navigationItem.hidesBackButton = YES;
+    
+    [self updateFiresDataSource];
+    [_listOfFiresTableView reloadData];
+    //Setup pull to refresh
+    id weakSelf = self;
+    [_listOfFiresTableView addPullToRefreshWithActionHandler:^{
+        [weakSelf updateFiresDataSource];
+    }];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self updateFiresDataSource];
+    [_listOfFiresTableView reloadData];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -81,6 +100,74 @@
         [self presentViewController:picker animated:YES completion:nil];
         
     }*/
+    
+    NSLog(@"Working fine till here");
+    //Make a fire
+    Fire *newFire = [Fire object];
+    newFire.category = 0;
+    newFire.fireType = 2;
+    
+    newFire.originator = [PFUser currentUser];
+    newFire.numOfViews = 1;
+    NSLog(@"okay here");
+    
+    [newFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if(!error){
+            if(succeeded){
+                
+                [newFire setObject:[PFUser currentUser] forKey:@"Originator"];
+                //[newFire setObject:1 forKey:@"NumberOfViews"];
+                NSLog(@"Fine till here");
+                ReceivedFire *recvFire = [ReceivedFire object];
+            
+                PFQuery *userQuery = [PFUser query];
+                //[userQuery whereKey:@"objectId" equalTo:@"xmYIG1TsKa"];
+            
+                PFUser *recver = (PFUser*)[userQuery getObjectWithId:@"xmYIG1TsKa"];
+            
+                recvFire.receiver = recver;
+                recvFire.fire = newFire;
+                
+                [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded){
+                        [newFire setObject:recver forKey:@"Receiver"];
+                        [newFire setObject:newFire forKey:@"Fire"];
+                        NSLog(@"Save success");
+                        
+                    }
+                    else{
+                        NSLog(@"Save failed");
+                    }
+                }];
+                
+                ReceivedFire *recvFire1 = [ReceivedFire object];
+                
+                
+                
+                recvFire1.receiver = [PFUser currentUser];
+                recvFire1.fire = newFire;
+                
+                [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded){
+                        [newFire setObject:[PFUser currentUser] forKey:@"Receiver"];
+                        [newFire setObject:newFire forKey:@"Fire"];
+                        NSLog(@"Save success");
+                        
+                    }
+                    else{
+                        NSLog(@"Save failed");
+                    }
+                }];
+            
+                [Utilities popUpMessage:@"Created a fire and sent to Jason"];
+            }
+        }
+        else{
+            [Utilities popUpMessage:@"Error creating the fire"];
+        }
+    }];
+    
 }
 
 - (IBAction)settingsButton:(id)sender {
@@ -129,5 +216,84 @@
     }
     
 }*/
+
+-(void)updateFiresDataSource
+{
+    if(!_fires){
+        _fires = [[NSMutableArray alloc] init];
+    }
+    
+    [ReceivedFire getAllLiveFires:^(NSArray *results, NSError *error) {
+        if(!error){
+            @synchronized(_fires){
+                [_fires removeAllObjects];
+                [_fires addObjectsFromArray:results];
+                NSLog(@"fires in table: %d",_fires.count);
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //[_listOfFiresTableView.pullToRefreshView stopAnimating];
+                [_listOfFiresTableView reloadData];
+            });
+        }
+    }];
+}
+
+
+#pragma mark
+#pragma mark - UITableView Datasource and Delegate
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] init];
+    
+    
+    return headerView;
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return _fires.count;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 55.0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"table delegate method fires: %d",  _fires.count);
+	static NSString *cellIdentifier = @"Cell";
+	//static NSString *CellIdentifier = @"TableCell";
+    FireTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    int row = [indexPath row];
+    
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    
+    
+}
+
+
+
 
 @end
