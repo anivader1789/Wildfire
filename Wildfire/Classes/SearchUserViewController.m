@@ -156,8 +156,6 @@
         NSLog(@"is followed");
     }
     
-    
-    
     return cell;
 }
 
