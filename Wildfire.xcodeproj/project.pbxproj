@@ -64,6 +64,9 @@
 		9A3816EC193FB1CC000B4E46 /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3816EB193FB1CC000B4E46 /* iPhoneMain.storyboard */; };
 		9A44AA571950927B000121ED /* SearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44AA561950927B000121ED /* SearchUserViewController.m */; };
 		9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44AA59195093BB000121ED /* SearchUserTableCell.m */; };
+		9A65C404195217CC001D920B /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A65C403195217CC001D920B /* AWSRuntime.framework */; };
+		9A65C406195217D4001D920B /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A65C405195217D4001D920B /* AWSS3.framework */; };
+		9A65C4091952181F001D920B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65C4081952181F001D920B /* Constants.m */; };
 		9A6EA36619475BE700766A72 /* Fire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36519475BE700766A72 /* Fire.m */; };
 		9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36819475C0B00766A72 /* ReceivedFire.m */; };
 		9A6EA36C19475C2600766A72 /* Following.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36B19475C2600766A72 /* Following.m */; };
@@ -167,6 +170,10 @@
 		9A44AA561950927B000121ED /* SearchUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchUserViewController.m; path = Classes/SearchUserViewController.m; sourceTree = "<group>"; };
 		9A44AA58195093BB000121ED /* SearchUserTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchUserTableCell.h; path = Classes/SearchUserTableCell.h; sourceTree = "<group>"; };
 		9A44AA59195093BB000121ED /* SearchUserTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchUserTableCell.m; path = Classes/SearchUserTableCell.m; sourceTree = "<group>"; };
+		9A65C403195217CC001D920B /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
+		9A65C405195217D4001D920B /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		9A65C4071952181F001D920B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9A65C4081952181F001D920B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		9A6EA36419475BE700766A72 /* Fire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fire.h; path = Classes/Fire.h; sourceTree = "<group>"; };
 		9A6EA36519475BE700766A72 /* Fire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fire.m; path = Classes/Fire.m; sourceTree = "<group>"; };
 		9A6EA36719475C0B00766A72 /* ReceivedFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivedFire.h; path = Classes/ReceivedFire.h; sourceTree = "<group>"; };
@@ -202,6 +209,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A65C406195217D4001D920B /* AWSS3.framework in Frameworks */,
+				9A65C404195217CC001D920B /* AWSRuntime.framework in Frameworks */,
 				9A2EB303194234B600A9D609 /* Social.framework in Frameworks */,
 				9A2EB3011942339B00A9D609 /* CFNetwork.framework in Frameworks */,
 				9A2EB2FF1942336C00A9D609 /* MobileCoreServices.framework in Frameworks */,
@@ -277,6 +286,8 @@
 		9A381674193F7FF3000B4E46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A65C405195217D4001D920B /* AWSS3.framework */,
+				9A65C403195217CC001D920B /* AWSRuntime.framework */,
 				9A2EB302194234B600A9D609 /* Social.framework */,
 				9A2EB3001942339B00A9D609 /* CFNetwork.framework */,
 				9A2EB2FE1942336C00A9D609 /* MobileCoreServices.framework */,
@@ -387,6 +398,8 @@
 				2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */,
 				9AB2B5FB1947A6D0002DB3D7 /* FireTableCell.h */,
 				9AB2B5FC1947A6D0002DB3D7 /* FireTableCell.m */,
+				9A65C4071952181F001D920B /* Constants.h */,
+				9A65C4081952181F001D920B /* Constants.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -534,6 +547,7 @@
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
 				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
+				9A65C4091952181F001D920B /* Constants.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
 				9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */,
 				2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */,
