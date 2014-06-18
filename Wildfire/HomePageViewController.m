@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "SettingsViewController.h"
+#import "AVCamViewController.h"
 #import "Fire.h"
 #import "ReceivedFire.h"
 #import "Utilities.h"
@@ -134,7 +135,7 @@
         
     }*/
     
-    NSLog(@"Working fine till here");
+    /*NSLog(@"Working fine till here");
     //Make a fire
     Fire *newFire = [Fire object];
     newFire.category = 0;
@@ -186,7 +187,10 @@
         else{
             [Utilities popUpMessage:@"Error creating the fire"];
         }
-    }];
+    }];*/
+    
+    AVCamViewController *aVCam = [self.storyboard instantiateViewControllerWithIdentifier:@"aVCamScreen"];
+    [self.navigationController pushViewController:aVCam animated:NO];
     
 }
 

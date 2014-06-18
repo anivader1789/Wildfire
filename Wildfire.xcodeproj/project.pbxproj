@@ -11,6 +11,9 @@
 		2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */; };
 		2E28FAFE1944BEEC001B1634 /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFD1944BEEC001B1634 /* rightArrow.png */; };
 		2E28FB001944C0B3001B1634 /* facebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFF1944C0B3001B1634 /* facebookIcon.png */; };
+		2E3C6405195221D900A3668A /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C6402195221D900A3668A /* AVCamViewController.m */; };
+		2E3C6406195221D900A3668A /* PhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C6404195221D900A3668A /* PhotoEditViewController.m */; };
+		2E3C6409195221EF00A3668A /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C6408195221EF00A3668A /* AVCamPreviewView.m */; };
 		2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */; };
 		2E489660194601CD002584BB /* WildFire.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E48965F194601CD002584BB /* WildFire.png */; };
 		2E4896631946027B002584BB /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4896621946027B002584BB /* CameraViewController.m */; };
@@ -100,6 +103,12 @@
 		2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsTableViewController.m; sourceTree = "<group>"; };
 		2E28FAFD1944BEEC001B1634 /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
 		2E28FAFF1944C0B3001B1634 /* facebookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookIcon.png; sourceTree = "<group>"; };
+		2E3C6401195221D900A3668A /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
+		2E3C6402195221D900A3668A /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
+		2E3C6403195221D900A3668A /* PhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEditViewController.h; sourceTree = "<group>"; };
+		2E3C6404195221D900A3668A /* PhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEditViewController.m; sourceTree = "<group>"; };
+		2E3C6407195221EF00A3668A /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		2E3C6408195221EF00A3668A /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
 		2E41D74A1946446E00FE4CE2 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		2E48965F194601CD002584BB /* WildFire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WildFire.png; sourceTree = "<group>"; };
@@ -367,6 +376,8 @@
 		9A3816AD193F8010000B4E46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2E3C6407195221EF00A3668A /* AVCamPreviewView.h */,
+				2E3C6408195221EF00A3668A /* AVCamPreviewView.m */,
 				9A44AA58195093BB000121ED /* SearchUserTableCell.h */,
 				9A44AA59195093BB000121ED /* SearchUserTableCell.m */,
 				9AB2B5FE1947B427002DB3D7 /* SVPullToRefresh.h */,
@@ -407,6 +418,10 @@
 		9A3816AE193F801B000B4E46 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E3C6401195221D900A3668A /* AVCamViewController.h */,
+				2E3C6402195221D900A3668A /* AVCamViewController.m */,
+				2E3C6403195221D900A3668A /* PhotoEditViewController.h */,
+				2E3C6404195221D900A3668A /* PhotoEditViewController.m */,
 				2E90976A194620A6003BF5A4 /* ContactsPageViewController.h */,
 				2E90976B194620A6003BF5A4 /* ContactsPageViewController.m */,
 				2E489664194602A5002584BB /* LoginScreenViewController.h */,
@@ -566,13 +581,16 @@
 				2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */,
 				2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */,
 				2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */,
+				2E3C6405195221D900A3668A /* AVCamViewController.m in Sources */,
 				2ECF47FB1946641600D53EFB /* TrendingTableViewController.m in Sources */,
 				9A381682193F7FF3000B4E46 /* main.m in Sources */,
 				2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */,
 				2E90976F194633B4003BF5A4 /* PhotoViewController.m in Sources */,
 				9AB2B6041947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				2E3C6406195221D900A3668A /* PhotoEditViewController.m in Sources */,
 				9AC22B9B194617BB00DBBDD0 /* SettingsViewController.m in Sources */,
 				9AC22B9E194619FF00DBBDD0 /* MBProgressHUD.m in Sources */,
+				2E3C6409195221EF00A3668A /* AVCamPreviewView.m in Sources */,
 				9A6EA36619475BE700766A72 /* Fire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

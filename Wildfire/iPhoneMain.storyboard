@@ -642,11 +642,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ZSt-FE-gIE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UWS-pc-qKE">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-Nn-hT3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -677,7 +677,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuH-fo-XB7">
-                                <rect key="frame" x="0.0" y="455" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="367" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Profile" id="0ED-Uc-pMv">
@@ -712,6 +712,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems>
                         <barButtonItem title="Profile" id="sLi-kp-psz"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="7EB-hl-D9c"/>
@@ -721,7 +722,8 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Home" id="NkA-dj-VVb"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="listOfFiresTableView" destination="VUV-Nn-hT3" id="R0t-eE-AdM"/>
                     </connections>
@@ -813,11 +815,164 @@
             </objects>
             <point key="canvasLocation" x="-462" y="1168"/>
         </scene>
+        <!--Cam View Controller-->
+        <scene sceneID="Ie0-Ke-J1i">
+            <objects>
+                <viewController storyboardIdentifier="aVCamScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aQg-88-TRI" customClass="AVCamViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zYB-w3-74v"/>
+                        <viewControllerLayoutGuide type="bottom" id="cjl-Ha-Iib"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B35-Wy-1sn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crE-lq-bN1" customClass="AVCamPreviewView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWd-IJ-VGq">
+                                        <rect key="frame" x="32" y="428" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="1pu-6w-3xF"/>
+                                            <constraint firstAttribute="height" constant="30" id="cwq-jR-LfX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleMovieRecording:" destination="aQg-88-TRI" eventType="touchUpInside" id="OWE-PQ-7R2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-mh-2Oh">
+                                        <rect key="frame" x="124" y="428" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="EIE-lN-4tb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Still">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="snapStillImage:" destination="aQg-88-TRI" eventType="touchUpInside" id="88r-Mi-MHj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-dG-jZX">
+                                        <rect key="frame" x="216" y="428" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="mkA-VD-LHF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Camera">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeCamera:" destination="aQg-88-TRI" eventType="touchUpInside" id="Azp-Lz-oAv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPK-QX-hsj">
+                                        <rect key="frame" x="197" y="204" width="69" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Test">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="testButton:" destination="aQg-88-TRI" eventType="touchUpInside" id="5sj-48-0ZO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="ZWd-IJ-VGq" firstAttribute="bottom" secondItem="s5f-mh-2Oh" secondAttribute="bottom" id="9fH-ir-v9K"/>
+                                    <constraint firstItem="s5f-mh-2Oh" firstAttribute="top" secondItem="ZWd-IJ-VGq" secondAttribute="top" id="Oqm-7U-DyQ"/>
+                                    <constraint firstItem="kwv-dG-jZX" firstAttribute="leading" secondItem="s5f-mh-2Oh" secondAttribute="trailing" constant="20" id="Q6k-sx-7er"/>
+                                    <constraint firstItem="kwv-dG-jZX" firstAttribute="bottom" secondItem="s5f-mh-2Oh" secondAttribute="bottom" id="Wvx-ki-qqe"/>
+                                    <constraint firstItem="s5f-mh-2Oh" firstAttribute="centerX" secondItem="crE-lq-bN1" secondAttribute="centerX" id="cJy-uk-uaP"/>
+                                    <constraint firstItem="kwv-dG-jZX" firstAttribute="top" secondItem="s5f-mh-2Oh" secondAttribute="top" id="d20-MN-6qz"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZWd-IJ-VGq" secondAttribute="bottom" constant="22" id="gNY-mb-vjd"/>
+                                    <constraint firstItem="s5f-mh-2Oh" firstAttribute="leading" secondItem="ZWd-IJ-VGq" secondAttribute="trailing" constant="20" id="oQH-NU-vt8"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wtm-Jz-cLP" appends="YES" id="PP2-Bz-1RJ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="crE-lq-bN1" firstAttribute="leading" secondItem="B35-Wy-1sn" secondAttribute="leading" id="1DP-ZI-g8m"/>
+                            <constraint firstAttribute="bottom" secondItem="crE-lq-bN1" secondAttribute="bottom" id="MO2-c3-3th"/>
+                            <constraint firstAttribute="trailing" secondItem="crE-lq-bN1" secondAttribute="trailing" id="Wza-my-drq"/>
+                            <constraint firstItem="crE-lq-bN1" firstAttribute="top" secondItem="B35-Wy-1sn" secondAttribute="top" id="iSN-uE-Pyu"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="kwv-dG-jZX" id="FTr-of-2bb"/>
+                        <outlet property="previewView" destination="crE-lq-bN1" id="MfF-8s-vVG"/>
+                        <outlet property="recordButton" destination="ZWd-IJ-VGq" id="6f9-n9-BMv"/>
+                        <outlet property="stillButton" destination="s5f-mh-2Oh" id="lDe-0V-PEf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23I-9D-W55" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Wtm-Jz-cLP">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="aQg-88-TRI" id="zsh-Tq-MSA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1307" y="478"/>
+        </scene>
+        <!--Photo Edit View Controller-->
+        <scene sceneID="NaG-aZ-J0Y">
+            <objects>
+                <viewController storyboardIdentifier="photoEditScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qt0-ea-X6c" customClass="PhotoEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0tz-ce-cgk"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQ7-1h-5mj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9if-C6-cJq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebookIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="dci-k3-ld0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="406"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bS-7P-tTt">
+                                <rect key="frame" x="137" y="444" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Spread">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mainImageView" destination="dci-k3-ld0" id="RH7-3T-gT1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUq-sX-ss3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637" y="478"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Facebook.png" width="25" height="25"/>
         <image name="Wild Fire Logo.png" width="428" height="595"/>
         <image name="WildFire.png" width="722" height="159"/>
+        <image name="facebookIcon.png" width="420" height="416"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
