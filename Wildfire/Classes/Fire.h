@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import <Parse/PFObject+Subclass.h>
 
-
+/*
 typedef enum{
     Technology,
     Politics,
@@ -28,6 +28,7 @@ typedef enum{
     Celebrity,
     Random
 }Category;
+ */
 
 typedef enum{
     Audio,

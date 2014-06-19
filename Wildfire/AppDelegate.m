@@ -167,7 +167,7 @@
 -(void)userLogIn
 {
     
-    HomePageViewController *homePage = [_storyboard instantiateViewControllerWithIdentifier:@"HomePage"];;
+    HomePageViewController *homePage = [_storyboard instantiateViewControllerWithIdentifier:@"HomePage"];
      _navController.navigationBarHidden = NO;
     [_navController pushViewController:homePage animated:NO];
     

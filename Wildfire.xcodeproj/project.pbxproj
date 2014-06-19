@@ -70,6 +70,7 @@
 		9A65C404195217CC001D920B /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A65C403195217CC001D920B /* AWSRuntime.framework */; };
 		9A65C406195217D4001D920B /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A65C405195217D4001D920B /* AWSS3.framework */; };
 		9A65C4091952181F001D920B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65C4081952181F001D920B /* Constants.m */; };
+		9A65C40C19534077001D920B /* FireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65C40B19534077001D920B /* FireViewController.m */; };
 		9A6EA36619475BE700766A72 /* Fire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36519475BE700766A72 /* Fire.m */; };
 		9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36819475C0B00766A72 /* ReceivedFire.m */; };
 		9A6EA36C19475C2600766A72 /* Following.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36B19475C2600766A72 /* Following.m */; };
@@ -183,6 +184,8 @@
 		9A65C405195217D4001D920B /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		9A65C4071952181F001D920B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9A65C4081952181F001D920B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		9A65C40A19534077001D920B /* FireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireViewController.h; path = Classes/FireViewController.h; sourceTree = "<group>"; };
+		9A65C40B19534077001D920B /* FireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireViewController.m; path = Classes/FireViewController.m; sourceTree = "<group>"; };
 		9A6EA36419475BE700766A72 /* Fire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fire.h; path = Classes/Fire.h; sourceTree = "<group>"; };
 		9A6EA36519475BE700766A72 /* Fire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fire.m; path = Classes/Fire.m; sourceTree = "<group>"; };
 		9A6EA36719475C0B00766A72 /* ReceivedFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceivedFire.h; path = Classes/ReceivedFire.h; sourceTree = "<group>"; };
@@ -218,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A381678193F7FF3000B4E46 /* CoreGraphics.framework in Frameworks */,
 				9A65C406195217D4001D920B /* AWSS3.framework in Frameworks */,
 				9A65C404195217CC001D920B /* AWSRuntime.framework in Frameworks */,
 				9A2EB303194234B600A9D609 /* Social.framework in Frameworks */,
@@ -241,7 +245,6 @@
 				9A3816D2193F9893000B4E46 /* CoreLocation.framework in Frameworks */,
 				9A3816D0193F988D000B4E46 /* CoreData.framework in Frameworks */,
 				9A3816CE193F9881000B4E46 /* AVFoundation.framework in Frameworks */,
-				9A381678193F7FF3000B4E46 /* CoreGraphics.framework in Frameworks */,
 				9A38167A193F7FF3000B4E46 /* UIKit.framework in Frameworks */,
 				9A3816E8193FA664000B4E46 /* GoogleMaps.framework in Frameworks */,
 				9A381676193F7FF3000B4E46 /* Foundation.framework in Frameworks */,
@@ -449,6 +452,8 @@
 				2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */,
 				9A44AA551950927B000121ED /* SearchUserViewController.h */,
 				9A44AA561950927B000121ED /* SearchUserViewController.m */,
+				9A65C40A19534077001D920B /* FireViewController.h */,
+				9A65C40B19534077001D920B /* FireViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				9A65C4091952181F001D920B /* Constants.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
 				9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */,
+				9A65C40C19534077001D920B /* FireViewController.m in Sources */,
 				2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */,
 				9AC22BA41946248E00DBBDD0 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				9A6EA36C19475C2600766A72 /* Following.m in Sources */,

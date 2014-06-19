@@ -15,6 +15,8 @@
 #import "FireTableCell.h"
 #import "ProfilePageViewController.h"
 #import "Following.h"
+#import "FireViewController.h"
+
 
 @interface HomePageViewController ()
 
@@ -62,7 +64,12 @@
     [_listOfFiresTableView addPullToRefreshWithActionHandler:^{
         [weakSelf updateFiresDataSource];
     }];
+    
+    
 }
+
+
+
 
 -(void) reloadFollowees
 {
@@ -297,7 +304,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"table delegate method fires: %d",  _fires.count);
+    NSLog(@"table delegate method fires: %lu",  (unsigned long)_fires.count);
 	static NSString *cellIdentifier = @"Cell";
 	//static NSString *CellIdentifier = @"TableCell";
     FireTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -312,7 +319,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    NSLog(@"Clicked");
+    ReceivedFire *recvFire = [_fires objectAtIndex:[indexPath row]];
+    Fire *fire = recvFire.fire;
     
+    FireViewController *fireView = [self.storyboard instantiateViewControllerWithIdentifier:@"fireView"];
+    fireView.receivedFire = recvFire;
+    fireView.fire = fire;
+    [self.navigationController pushViewController:fireView animated:YES];
     
     
 }

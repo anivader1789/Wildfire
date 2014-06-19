@@ -33,7 +33,7 @@
                 NSMutableArray* results = [[NSMutableArray alloc] init];
                 for(int i=0;i<objects.count;i++){
                     //if([Utilities isExpired:[[objects objectAtIndex:i] objectForKey:@"createdAt"]]){
-                        [results addObject:[[objects objectAtIndex:i] objectForKey:@"fire"]];
+                        [results addObject:[objects objectAtIndex:i]];
                     //}
                 }
                 NSLog(@"fires %d",results.count);
