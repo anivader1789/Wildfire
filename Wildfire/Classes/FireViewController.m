@@ -164,29 +164,41 @@
 
 - (IBAction)spread:(id)sender {
     for(PFUser *follower in _followers){
-        ReceivedFire *recvFire = [ReceivedFire object];
         
-        //PFQuery *userQuery = [PFUser query];
-        //[userQuery whereKey:@"objectId" equalTo:@"xmYIG1TsKa"];
+        PFQuery *query = [ReceivedFire query];
+        [query whereKey:@"receiver" equalTo:follower];
+        [query whereKey:@"fire" equalTo:_fire];
         
-        PFUser *recver = follower;
-        
-        recvFire.receiver = recver;
-        recvFire.fire = _fire;
-        
-        [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if(succeeded){
-                //[newFire setObject:recver forKey:@"Receiver"];
-                //[newFire setObject:newFire forKey:@"Fire"];
-                //[Utilities popUpMessage:[NSString stringWithFormat:@"Created a fire and sent to %@",followee.username]];
-                //[Utilities popUpMessage:@"Fire sent!!"];
-                
-                
-                NSLog(@"Save success");
-                
-            }
-            else{
-                NSLog(@"Save failed");
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(!error){
+                if(objects.count == 0){
+                    ReceivedFire *recvFire = [ReceivedFire object];
+                    
+                    //PFQuery *userQuery = [PFUser query];
+                    //[userQuery whereKey:@"objectId" equalTo:@"xmYIG1TsKa"];
+                    
+                    PFUser *recver = follower;
+                    
+                    recvFire.receiver = recver;
+                    recvFire.fire = _fire;
+                    
+                    [recvFire saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if(succeeded){
+                            //[newFire setObject:recver forKey:@"Receiver"];
+                            //[newFire setObject:newFire forKey:@"Fire"];
+                            //[Utilities popUpMessage:[NSString stringWithFormat:@"Created a fire and sent to %@",followee.username]];
+                            //[Utilities popUpMessage:@"Fire sent!!"];
+                            
+                            
+                            NSLog(@"Save success");
+                            
+                        }
+                        else{
+                            NSLog(@"Save failed");
+                        }
+                    }];
+
+                }
             }
         }];
         
