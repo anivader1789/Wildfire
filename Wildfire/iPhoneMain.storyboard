@@ -203,6 +203,11 @@
                                             <action selector="launchButton:" destination="qSm-Rw-q8m" eventType="touchUpInside" id="Sbn-Mj-OiG"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-cI-nUx">
+                                        <rect key="frame" x="149" y="317" width="123" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
