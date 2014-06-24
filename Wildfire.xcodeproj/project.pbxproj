@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */; };
+		2E1AE9001959E177005D3FB1 /* AudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */; };
+		2E1AE9031959E1B2005D3FB1 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */; };
 		2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */; };
 		2E28FAFE1944BEEC001B1634 /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFD1944BEEC001B1634 /* rightArrow.png */; };
 		2E28FB001944C0B3001B1634 /* facebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFF1944C0B3001B1634 /* facebookIcon.png */; };
@@ -101,6 +103,10 @@
 /* Begin PBXFileReference section */
 		2E00CD5519478FA700EA8D2F /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
 		2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
+		2E1AE8FE1959E177005D3FB1 /* AudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerViewController.h; sourceTree = "<group>"; };
+		2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerViewController.m; sourceTree = "<group>"; };
+		2E1AE9011959E1B2005D3FB1 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
+		2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		2E28FAFA1944BB04001B1634 /* InviteFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsTableViewController.h; sourceTree = "<group>"; };
 		2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsTableViewController.m; sourceTree = "<group>"; };
 		2E28FAFD1944BEEC001B1634 /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
@@ -267,6 +273,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1AE8FD1959E093005D3FB1 /* Camera Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E1AE8FE1959E177005D3FB1 /* AudioPlayerViewController.h */,
+				2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */,
+				2E1AE9011959E1B2005D3FB1 /* MoviePlayerViewController.h */,
+				2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */,
+			);
+			name = "Camera Files";
+			sourceTree = "<group>";
+		};
 		2E5BCFF71942428100B3446E /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +354,7 @@
 		9A38167B193F7FF3000B4E46 /* Wildfire */ = {
 			isa = PBXGroup;
 			children = (
+				2E1AE8FD1959E093005D3FB1 /* Camera Files */,
 				2E5BCFF71942428100B3446E /* Images */,
 				9A3816AE193F801B000B4E46 /* View Controllers */,
 				9A3816AD193F8010000B4E46 /* Classes */,
@@ -569,10 +587,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC22BA31946248E00DBBDD0 /* UIImage+ResizeAdditions.m in Sources */,
+				2E1AE9001959E177005D3FB1 /* AudioPlayerViewController.m in Sources */,
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				9AABAF781958C46D00C920A3 /* CampaignViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
 				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
+				2E1AE9031959E1B2005D3FB1 /* MoviePlayerViewController.m in Sources */,
 				9A65C4091952181F001D920B /* Constants.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
 				9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */,
