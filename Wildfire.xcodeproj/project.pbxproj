@@ -74,6 +74,7 @@
 		9A6EA36619475BE700766A72 /* Fire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36519475BE700766A72 /* Fire.m */; };
 		9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36819475C0B00766A72 /* ReceivedFire.m */; };
 		9A6EA36C19475C2600766A72 /* Following.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36B19475C2600766A72 /* Following.m */; };
+		9AABAF781958C46D00C920A3 /* CampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABAF771958C46D00C920A3 /* CampaignViewController.m */; };
 		9AB2B5FD1947A6D0002DB3D7 /* FireTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB2B5FC1947A6D0002DB3D7 /* FireTableCell.m */; };
 		9AB2B6031947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB2B6001947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m */; };
 		9AB2B6041947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB2B6021947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m */; };
@@ -192,6 +193,8 @@
 		9A6EA36819475C0B00766A72 /* ReceivedFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceivedFire.m; path = Classes/ReceivedFire.m; sourceTree = "<group>"; };
 		9A6EA36A19475C2600766A72 /* Following.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Following.h; path = Classes/Following.h; sourceTree = "<group>"; };
 		9A6EA36B19475C2600766A72 /* Following.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Following.m; path = Classes/Following.m; sourceTree = "<group>"; };
+		9AABAF761958C46D00C920A3 /* CampaignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CampaignViewController.h; path = Classes/CampaignViewController.h; sourceTree = "<group>"; };
+		9AABAF771958C46D00C920A3 /* CampaignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CampaignViewController.m; path = Classes/CampaignViewController.m; sourceTree = "<group>"; };
 		9AB2B5FB1947A6D0002DB3D7 /* FireTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireTableCell.h; path = Classes/FireTableCell.h; sourceTree = "<group>"; };
 		9AB2B5FC1947A6D0002DB3D7 /* FireTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireTableCell.m; path = Classes/FireTableCell.m; sourceTree = "<group>"; };
 		9AB2B5FE1947B427002DB3D7 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
@@ -454,6 +457,8 @@
 				9A44AA561950927B000121ED /* SearchUserViewController.m */,
 				9A65C40A19534077001D920B /* FireViewController.h */,
 				9A65C40B19534077001D920B /* FireViewController.m */,
+				9AABAF761958C46D00C920A3 /* CampaignViewController.h */,
+				9AABAF771958C46D00C920A3 /* CampaignViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 			files = (
 				9AC22BA31946248E00DBBDD0 /* UIImage+ResizeAdditions.m in Sources */,
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
+				9AABAF781958C46D00C920A3 /* CampaignViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
 				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
 				9A65C4091952181F001D920B /* Constants.m in Sources */,

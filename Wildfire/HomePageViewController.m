@@ -308,8 +308,17 @@
 	static NSString *cellIdentifier = @"Cell";
 	//static NSString *CellIdentifier = @"TableCell";
     FireTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
     int row = [indexPath row];
+    ReceivedFire *recvFire = [_fires objectAtIndex:[indexPath row]];
+    
+    Fire *fire = recvFire.fire;
+    PFQuery *query = [Fire query];
+    Fire *queryFire = (Fire*)[query getObjectWithId:fire.objectId];
+    //PFUser *user = [fire objectForKey:@"originator"];
+    NSLog(@"Fire: %@",[queryFire objectForKey:@"numOfViews"]);
+    
+    
+    
     
     
     
