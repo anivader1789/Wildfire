@@ -68,7 +68,8 @@
         }
     }
 
-    
+    _fire.numOfViews++;
+    [_fire saveEventually];
     [self displayImage];
 }
 
