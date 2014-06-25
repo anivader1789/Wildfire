@@ -46,14 +46,32 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface AVCamViewController : UIViewController
+@interface AVCamViewController : UIViewController <AVAudioRecorderDelegate,UIImagePickerControllerDelegate>{
+    
+bool audioIsRecording;
+    __block UIImage *largeimage;
+    
+}
+
+//Audio recorder properties.
+@property (strong, nonatomic) AVAudioRecorder *audioRecorder;
 
 
 
-@property NSData *capturedPic;
+//Outlets
+@property (strong, nonatomic) IBOutlet UIButton *recordAudioOutlet;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *recordingFormatToggleOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *photoLibraryOutlet;
 
+//Buttons
 - (IBAction)testButton:(id)sender;
+- (IBAction)videoTestButton:(id)sender;
+- (IBAction)recordAudioAction:(id)sender;
+- (IBAction)recordAction:(id)sender;
+- (IBAction)picVidPickerAction:(id)sender;
 
 
 @end

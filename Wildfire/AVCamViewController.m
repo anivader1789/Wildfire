@@ -1,7 +1,7 @@
 /*
-     File: AVCamViewController.m
+ File: AVCamViewController.m
  Abstract: View controller for camera interface.
-  Version: 3.1
+ Version: 3.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -52,6 +52,8 @@
 
 #import "AVCamPreviewView.h"
 #import "PhotoEditViewController.h"
+#import "MoviePlayerViewController.h"
+#import "AudioPlayerViewController.h"
 
 static void * CapturingStillImageContext = &CapturingStillImageContext;
 static void * RecordingContext = &RecordingContext;
@@ -136,12 +138,12 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 		{
 			[session addInput:videoDeviceInput];
 			[self setVideoDeviceInput:videoDeviceInput];
-
+            
 			dispatch_async(dispatch_get_main_queue(), ^{
 				// Why are we dispatching this to the main queue?
 				// Because AVCaptureVideoPreviewLayer is the backing layer for AVCamPreviewView and UIView can only be manipulated on main thread.
 				// Note: As an exception to the above rule, it is not necessary to serialize video orientation changes on the AVCaptureVideoPreviewLayer’s connection with other session manipulation.
-  
+                
 				[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] setVideoOrientation:(AVCaptureVideoOrientation)[self interfaceOrientation]];
 			});
 		}
@@ -177,6 +179,53 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 			[self setStillImageOutput:stillImageOutput];
 		}
 	});
+    
+    
+    //Sound Recorder Code Start***********************
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(
+                                                   NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = dirPaths[0];
+    
+    NSString *soundFilePath = [docsDir
+                               stringByAppendingPathComponent:@"sound.caf"];
+    
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    
+    NSDictionary *recordSettings = [NSDictionary
+                                    dictionaryWithObjectsAndKeys:
+                                    [NSNumber numberWithInt:AVAudioQualityMin],
+                                    AVEncoderAudioQualityKey,
+                                    [NSNumber numberWithInt:16],
+                                    AVEncoderBitRateKey,
+                                    [NSNumber numberWithInt: 2],
+                                    AVNumberOfChannelsKey,
+                                    [NSNumber numberWithFloat:44100.0],
+                                    AVSampleRateKey,
+                                    nil];
+    
+    NSError *error = nil;
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord
+                        error:nil];
+    
+    _audioRecorder = [[AVAudioRecorder alloc]
+                      initWithURL:soundFileURL
+                      settings:recordSettings
+                      error:&error];
+    
+    if (error)
+    {
+        NSLog(@"error: %@", [error localizedDescription]);
+    } else {
+        [_audioRecorder prepareToRecord];
+    }
+    //Sound Recorder Code End**********************
+    
+    [self setLibraryThumbnail];//Sets image of library button to thumbnail of last video or image taken.
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -198,6 +247,8 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 		}]];
 		[[self session] startRunning];
 	});
+    
+    audioIsRecording = NO;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -294,34 +345,38 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 
 - (IBAction)toggleMovieRecording:(id)sender
 {
-	[[self recordButton] setEnabled:NO];
-	
-	dispatch_async([self sessionQueue], ^{
-		if (![[self movieFileOutput] isRecording])
-		{
-			[self setLockInterfaceRotation:YES];
-			
-			if ([[UIDevice currentDevice] isMultitaskingSupported])
-			{
-				// Setup background task. This is needed because the captureOutput:didFinishRecordingToOutputFileAtURL: callback is not received until AVCam returns to the foreground unless you request background execution time. This also ensures that there will be time to write the file to the assets library when AVCam is backgrounded. To conclude this background execution, -endBackgroundTask is called in -recorder:recordingDidFinishToOutputFileURL:error: after the recorded file has been saved.
-				[self setBackgroundRecordingID:[[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil]];
-			}
-			
-			// Update the orientation on the movie file output video connection before starting recording.
-			[[[self movieFileOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
-			
-			// Turning OFF flash for video recording
-			[AVCamViewController setFlashMode:AVCaptureFlashModeOff forDevice:[[self videoDeviceInput] device]];
-			
-			// Start recording to a temporary file.
-			NSString *outputFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[@"movie" stringByAppendingPathExtension:@"mov"]];
-			[[self movieFileOutput] startRecordingToOutputFileURL:[NSURL fileURLWithPath:outputFilePath] recordingDelegate:self];
-		}
-		else
-		{
-			[[self movieFileOutput] stopRecording];
-		}
-	});
+	/*[[self recordButton] setEnabled:NO];
+    
+    if(_recordingFormatToggleOutlet.selectedSegmentIndex==1){
+        dispatch_async([self sessionQueue], ^{
+            if (![[self movieFileOutput] isRecording])
+            {
+                [self setLockInterfaceRotation:YES];
+                
+                if ([[UIDevice currentDevice] isMultitaskingSupported])
+                {
+                    // Setup background task. This is needed because the captureOutput:didFinishRecordingToOutputFileAtURL: callback is not received until AVCam returns to the foreground unless you request background execution time. This also ensures that there will be time to write the file to the assets library when AVCam is backgrounded. To conclude this background execution, -endBackgroundTask is called in -recorder:recordingDidFinishToOutputFileURL:error: after the recorded file has been saved.
+                    [self setBackgroundRecordingID:[[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil]];
+                }
+                
+                // Update the orientation on the movie file output video connection before starting recording.
+                [[[self movieFileOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
+                
+                // Turning OFF flash for video recording
+                [AVCamViewController setFlashMode:AVCaptureFlashModeOff forDevice:[[self videoDeviceInput] device]];
+                
+                // Start recording to a temporary file.
+                NSString *outputFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[@"movie" stringByAppendingPathExtension:@"mov"]];
+                [[self movieFileOutput] startRecordingToOutputFileURL:[NSURL fileURLWithPath:outputFilePath] recordingDelegate:self];
+                
+            }
+            else
+            {
+                [[self movieFileOutput] stopRecording];
+                
+            }
+        });
+    }*/
 }
 
 - (IBAction)changeCamera:(id)sender
@@ -381,32 +436,42 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 
 - (IBAction)snapStillImage:(id)sender
 {
-	dispatch_async([self sessionQueue], ^{
-		// Update the orientation on the still image output video connection before capturing.
-		[[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
-		
-		// Flash set to Auto for Still Capture
-		[AVCamViewController setFlashMode:AVCaptureFlashModeAuto forDevice:[[self videoDeviceInput] device]];
-		
-		// Capture a still image.
-		[[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-			
-			if (imageDataSampleBuffer)
-			{
-				NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-				UIImage *image = [[UIImage alloc] initWithData:imageData];
+    /*if(_recordingFormatToggleOutlet.selectedSegmentIndex==0){
+        dispatch_async([self sessionQueue], ^{
+            // Update the orientation on the still image output video connection before capturing.
+            [[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
+            
+            // Flash set to Auto for Still Capture
+            [AVCamViewController setFlashMode:AVCaptureFlashModeAuto forDevice:[[self videoDeviceInput] device]];
+            
+            // Capture a still image.
+            [[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
                 
-                
-                
-				[[[ALAssetsLibrary alloc] init] writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:nil];
-                
-                _capturedPic = imageData;//Added by Jeff
-                
-                NSLog(@"storing pic");
-                
-			}
-		}];
-	});
+                if (imageDataSampleBuffer)
+                {
+                    NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+                    UIImage *image = [[UIImage alloc] initWithData:imageData];
+                    
+                    
+                    
+                    [[[ALAssetsLibrary alloc] init] writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:nil];
+                    
+                    NSLog(@"Did Save Picture");
+                    
+                    //Pushing to Photo Screen
+                    NSLog(@"Pushing to Photo Screen");
+                    PhotoEditViewController *photoEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"photoEditScreen"];
+                    photoEditController.capturedPic = imageData;
+                    [self.navigationController pushViewController:photoEditController animated:YES];
+                    
+                    
+                    
+                    
+                    
+                }
+            }];
+        });
+    }*/
 }
 
 - (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer
@@ -442,6 +507,12 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 		
 		if (backgroundRecordingID != UIBackgroundTaskInvalid)
 			[[UIApplication sharedApplication] endBackgroundTask:backgroundRecordingID];
+        
+        NSLog(@"Did Save Video");
+        
+        NSLog(@"Pushing to Video Screen");
+        MoviePlayerViewController *moviePlayerController = [self.storyboard instantiateViewControllerWithIdentifier:@"moviePlayerScreen"];
+        [self.navigationController pushViewController:moviePlayerController animated:YES];
 	}];
 }
 
@@ -546,13 +617,257 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 }
 
 - (IBAction)testButton:(id)sender {
-    //SignUpViewController *signUpController = [self.storyboard instantiateViewControllerWithIdentifier:@"signUpScreen"];
-    // [self.navigationController pushViewController:signUpController animated:NO];
+    /* //SignUpViewController *signUpController = [self.storyboard instantiateViewControllerWithIdentifier:@"signUpScreen"];
+     // [self.navigationController pushViewController:signUpController animated:NO];
+     
+     PhotoEditViewController *photoEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"photoEditScreen"];
+     //photoEditController.mainImageView.image = [UIImage imageWithData:_capturedPic];
+     photoEditController.capturedPic = _capturedPic;
+     [self.navigationController pushViewController:photoEditController animated:YES];
+     NSLog(@"Test Button Pressed");*/
+    NSLog(@"Recording Format Toggle = %i",_recordingFormatToggleOutlet.selectedSegmentIndex);
+}
+
+- (IBAction)videoTestButton:(id)sender {
+    /* MoviePlayerViewController *moviePlayerController = [self.storyboard instantiateViewControllerWithIdentifier:@"moviePlayerScreen"];
+     
+     [self.navigationController pushViewController:moviePlayerController animated:YES];*/
+}
+
+- (IBAction)recordAudioAction:(id)sender {
+    /*if(_recordingFormatToggleOutlet.selectedSegmentIndex==0){
+        if([_recordAudioOutlet.titleLabel.text  isEqualToString: @"Record Audio"]){
+            [_recordAudioOutlet setTitle:@"Stop Rec" forState:UIControlStateNormal];
+            NSLog(@"Recording");
+            [_audioRecorder record];
+        }else{
+            [_recordAudioOutlet setTitle:@"Record Audio" forState:UIControlStateNormal];
+            NSLog(@"Stoppped Recording");
+            [_audioRecorder stop];
+            
+            //Go to playAudioScreen
+            AudioPlayerViewController *audioPlayerController = [self.storyboard instantiateViewControllerWithIdentifier:@"audioPlayerScreen"];
+            audioPlayerController.audioUrl = _audioRecorder.url;
+            [self.navigationController pushViewController:audioPlayerController animated:YES];
+        }
+        
+    }*/
+}
+
+-(void)recordAudio{
+    if(_recordingFormatToggleOutlet.selectedSegmentIndex==2){
+        if(audioIsRecording == NO){
+            [_recordAudioOutlet setTitle:@"Stop Rec" forState:UIControlStateNormal];
+            NSLog(@"Recording");
+            [_audioRecorder record];
+            audioIsRecording = YES;
+        }else{
+            [_recordAudioOutlet setTitle:@"Record Audio" forState:UIControlStateNormal];
+            NSLog(@"Stoppped Recording");
+            [_audioRecorder stop];
+            audioIsRecording = NO;
+            
+            //Go to playAudioScreen
+            AudioPlayerViewController *audioPlayerController = [self.storyboard instantiateViewControllerWithIdentifier:@"audioPlayerScreen"];
+            audioPlayerController.audioUrl = _audioRecorder.url;
+            [self.navigationController pushViewController:audioPlayerController animated:YES];
+        }
+        
+    }
+
+}
+
+-(void)takePhoto{
+    if(_recordingFormatToggleOutlet.selectedSegmentIndex==0){
+        dispatch_async([self sessionQueue], ^{
+            // Update the orientation on the still image output video connection before capturing.
+            [[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
+            
+            // Flash set to Auto for Still Capture
+            [AVCamViewController setFlashMode:AVCaptureFlashModeAuto forDevice:[[self videoDeviceInput] device]];
+            
+            // Capture a still image.
+            [[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo] completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+                
+                if (imageDataSampleBuffer)
+                {
+                    NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+                    UIImage *image = [[UIImage alloc] initWithData:imageData];
+                    
+                    
+                    
+                    [[[ALAssetsLibrary alloc] init] writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:nil];
+                    
+                    NSLog(@"Did Save Picture");
+                    
+                    //Pushing to Photo Screen
+                    NSLog(@"Pushing to Photo Screen");
+                    PhotoEditViewController *photoEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"photoEditScreen"];
+                    photoEditController.capturedPic = imageData;
+                    [self.navigationController pushViewController:photoEditController animated:YES];
+                    
+                    
+                    
+                    
+                    
+                }
+            }];
+        });
+    }
+
+}
+
+-(void)recordVideo{
+    [[self recordButton] setEnabled:NO];
+    
+    if(_recordingFormatToggleOutlet.selectedSegmentIndex==1){
+        dispatch_async([self sessionQueue], ^{
+            if (![[self movieFileOutput] isRecording])
+            {
+                [self setLockInterfaceRotation:YES];
+                
+                if ([[UIDevice currentDevice] isMultitaskingSupported])
+                {
+                    // Setup background task. This is needed because the captureOutput:didFinishRecordingToOutputFileAtURL: callback is not received until AVCam returns to the foreground unless you request background execution time. This also ensures that there will be time to write the file to the assets library when AVCam is backgrounded. To conclude this background execution, -endBackgroundTask is called in -recorder:recordingDidFinishToOutputFileURL:error: after the recorded file has been saved.
+                    [self setBackgroundRecordingID:[[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil]];
+                }
+                
+                // Update the orientation on the movie file output video connection before starting recording.
+                [[[self movieFileOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
+                
+                // Turning OFF flash for video recording
+                [AVCamViewController setFlashMode:AVCaptureFlashModeOff forDevice:[[self videoDeviceInput] device]];
+                
+                // Start recording to a temporary file.
+                NSString *outputFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[@"movie" stringByAppendingPathExtension:@"mov"]];
+                [[self movieFileOutput] startRecordingToOutputFileURL:[NSURL fileURLWithPath:outputFilePath] recordingDelegate:self];
+                
+            }
+            else
+            {
+                [[self movieFileOutput] stopRecording];
+                
+            }
+        });
+    }
+}
+
+- (IBAction)recordAction:(id)sender {
+    [self recordAudio];
+    [self takePhoto];
+    [self recordVideo];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    
+   
+    
+        if ([mediaType isEqualToString:(NSString *)kUTTypeVideo] ||
+        [mediaType isEqualToString:(NSString *)kUTTypeMovie]){
+        NSLog(@"Picked a Video!");
+            NSURL* localUrl = info[UIImagePickerControllerReferenceURL];// [info objectForKey:UIImagePickerControllerMediaURL];
+             NSLog(@"URL***************: %@",localUrl);
+            
+        }else{
+           NSLog(@"Picked a Photo!");
+            // [_photoLibraryOutlet setBackgroundImage:[info objectForKey:UIImagePickerControllerEditedImage]forState:UIControlStateNormal];
+             //[_photoLibraryOutlet setBackgroundImage:[UIImage imageWithContentsOfFile: @"assets-library://asset/asset.JPG?id=929157AA-8B50-4359-9268-F45B95599EA7&ext=JPG"] forState:UIControlStateNormal];
+            //[_photoLibraryOutlet setBackgroundImage:(UIImage*) [info objectForKey:UIImagePickerControllerOriginalImage] forState:UIControlStateNormal];
+            
+            
+           // NSURL* localUrl = info[UIImagePickerControllerReferenceURL];// [info objectForKey:UIImagePickerControllerMediaURL];
+            // NSLog(@"URL***************: %@",localUrl);
+            
+           // NSString *testString = @"assets-library://asset/asset.JPG?id=929157AA-8B50-4359-9268-F45B95599EA7&ext=JPG";
+            
+           
+           // NSData *data=[NSData dataWithContentsOfURL:[NSURL URLWithString:[localUrl path]]];
+            PhotoEditViewController *photoEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"photoEditScreen"];
+            photoEditController.capturedPic  = UIImageJPEGRepresentation((UIImage*) [info objectForKey:UIImagePickerControllerOriginalImage], 0.7); // 0.7 is JPG quality;
+            [self.navigationController pushViewController:photoEditController animated:YES];
+        }
+    
+    
+}
+
+
+/*#pragma mark - Image Picker Delegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo{
+     NSURL* localUrl = (NSURL*)[editingInfo valueForKey:UIImagePickerControllerReferenceURL];
+    
+    [_photoLibraryOutlet setBackgroundImage:[UIImage imageWithContentsOfFile: @"assets-library://asset/asset.JPG?id=929157AA-8B50-4359-9268-F45B95599EA7&ext=JPG"] forState:UIControlStateNormal];
+    
+     NSLog(@"URL***************: %@",localUrl);
+    
+    
+    
+    NSData *data=[NSData dataWithContentsOfURL:[NSURL URLWithString:[localUrl absoluteString]]];
+    
     
     PhotoEditViewController *photoEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"photoEditScreen"];
-    //photoEditController.mainImageView.image = [UIImage imageWithData:_capturedPic];
-    photoEditController.capturedPic = _capturedPic;
+    photoEditController.capturedPic = data;
     [self.navigationController pushViewController:photoEditController animated:YES];
-    NSLog(@"Test Button Pressed");
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}*/
+
+
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)picVidPickerAction:(id)sender { UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    
+    picker.delegate = self;
+    
+    picker.allowsEditing = YES;
+    
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:
+                         UIImagePickerControllerSourceTypeCamera];
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+
+- (IBAction)goToAudioAction:(id)sender {
+}
+
+-(void)setLibraryThumbnail{
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop)
+     {
+         [group enumerateAssetsUsingBlock:^(ALAsset *alAsset, NSUInteger index, BOOL *innerStop)
+          {
+              if (alAsset)
+              {
+                  //ALAssetRepresentation *representation =[alAsset defaultRepresentation];
+                 // NSURL *url = [representation url];
+                 // NSString *assetType=[alAsset valueForProperty:ALAssetPropertyType];
+                  UIImage *thumbnailImage =[UIImage imageWithCGImage:alAsset.thumbnail];
+                  [_photoLibraryOutlet setBackgroundImage:thumbnailImage
+                                                 forState:UIControlStateNormal];
+                  _photoLibraryOutlet.backgroundColor = [UIColor clearColor];
+                  
+                        }
+          }];
+         if(group==nil)
+         {
+             // do what ever if group getting null
+             
+         }
+     } failureBlock: ^(NSError *error)
+     {
+         // may be photo privacy setting disabled
+     }
+     ];
+
 }
 @end

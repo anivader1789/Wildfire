@@ -37,6 +37,11 @@
               if (alAsset)
               {
                   ALAssetRepresentation *representation =[alAsset defaultRepresentation];
+                  
+                 // Byte *buffer = (Byte*)malloc(representation.size);
+                 // NSUInteger buffered = [representation getBytes:buffer fromOffset:0.0 length:representation.size error:nil];
+                 // NSData data = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
+                  
                   NSURL *url = [representation url];
                   NSString *assetType=[alAsset valueForProperty:ALAssetPropertyType];
                   //UIImage *thumbNailImage=[UIImage imageWithCGImage:alAsset.thumbnail];
@@ -53,6 +58,24 @@
              
              //NSURL *url = [[NSURL alloc]initWithString:@"http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1211/sample_iTunes.mov"];
              
+             NSString *filePath = [[NSBundle mainBundle] pathForResource:@"IMG_1629" ofType:@"MOV"];
+             
+             NSError *error = nil;
+             NSData *data = [NSData dataWithContentsOfFile:filePath options:nil error:&error];
+             if(data == nil && error!=nil) {
+                 //Print error description
+             }
+             
+            // NSLog(@"Data****************: %@", [data description]);
+             
+             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+             NSString *documentsDirectory = [paths objectAtIndex:0];
+             NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"MyFile.MOV"];
+             [data writeToFile:appFile atomically:YES];
+             
+             NSURL *movieUrl = [NSURL fileURLWithPath:appFile];
+             moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieUrl];
+             
              NSLog(@"playing %@",_videoURL);
              NSURL *url = _videoURL;
              
@@ -60,7 +83,7 @@
              _movieData = [NSData dataWithContentsOfURL:url];
              
              //Create our moviePlayer
-             moviePlayer = [[MPMoviePlayerController alloc]initWithContentURL:url];
+             //moviePlayer = [[MPMoviePlayerController alloc]initWithContentURL:url];
              
              [moviePlayer.view setFrame:CGRectMake(0, 30,327, 375)];
              [self.view addSubview:moviePlayer.view];

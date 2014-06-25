@@ -196,7 +196,7 @@
         }
     }];*/
     
-    AVCamViewController *aVCam = [self.storyboard instantiateViewControllerWithIdentifier:@"aVCamScreen"];
+    AVCamViewController *aVCam = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraScreen"];
     [self.navigationController pushViewController:aVCam animated:NO];
     
 }

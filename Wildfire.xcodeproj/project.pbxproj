@@ -10,17 +10,20 @@
 		2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */; };
 		2E1AE9001959E177005D3FB1 /* AudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */; };
 		2E1AE9031959E1B2005D3FB1 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */; };
+		2E1AE90A1959E5E8005D3FB1 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9051959E5E8005D3FB1 /* AVCamPreviewView.m */; };
+		2E1AE90B1959E5E8005D3FB1 /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9071959E5E8005D3FB1 /* AVCamViewController.m */; };
+		2E1AE90C1959E5E8005D3FB1 /* AVPlayerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9091959E5E8005D3FB1 /* AVPlayerClass.m */; };
+		2E1AE90E1959F940005D3FB1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1AE90D1959F940005D3FB1 /* MediaPlayer.framework */; };
 		2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */; };
 		2E28FAFE1944BEEC001B1634 /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFD1944BEEC001B1634 /* rightArrow.png */; };
 		2E28FB001944C0B3001B1634 /* facebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E28FAFF1944C0B3001B1634 /* facebookIcon.png */; };
-		2E3C6405195221D900A3668A /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C6402195221D900A3668A /* AVCamViewController.m */; };
 		2E3C6406195221D900A3668A /* PhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C6404195221D900A3668A /* PhotoEditViewController.m */; };
-		2E3C6409195221EF00A3668A /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C6408195221EF00A3668A /* AVCamPreviewView.m */; };
 		2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */; };
 		2E489660194601CD002584BB /* WildFire.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E48965F194601CD002584BB /* WildFire.png */; };
 		2E4896631946027B002584BB /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4896621946027B002584BB /* CameraViewController.m */; };
 		2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E489665194602A5002584BB /* LoginScreenViewController.m */; };
 		2E5BCFFD1942448700B3446E /* contactsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BCFFC1942448700B3446E /* contactsIcon.png */; };
+		2E7ED506195B4B0B006A1842 /* IMG_1629.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 2E7ED505195B4B0B006A1842 /* IMG_1629.MOV */; };
 		2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */; };
 		2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90976519461594003BF5A4 /* ProfilePageViewController.m */; };
 		2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90976B194620A6003BF5A4 /* ContactsPageViewController.m */; };
@@ -107,16 +110,19 @@
 		2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerViewController.m; sourceTree = "<group>"; };
 		2E1AE9011959E1B2005D3FB1 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
+		2E1AE9041959E5E8005D3FB1 /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		2E1AE9051959E5E8005D3FB1 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		2E1AE9061959E5E8005D3FB1 /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
+		2E1AE9071959E5E8005D3FB1 /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
+		2E1AE9081959E5E8005D3FB1 /* AVPlayerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerClass.h; sourceTree = "<group>"; };
+		2E1AE9091959E5E8005D3FB1 /* AVPlayerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerClass.m; sourceTree = "<group>"; };
+		2E1AE90D1959F940005D3FB1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2E28FAFA1944BB04001B1634 /* InviteFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsTableViewController.h; sourceTree = "<group>"; };
 		2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsTableViewController.m; sourceTree = "<group>"; };
 		2E28FAFD1944BEEC001B1634 /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
 		2E28FAFF1944C0B3001B1634 /* facebookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookIcon.png; sourceTree = "<group>"; };
-		2E3C6401195221D900A3668A /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
-		2E3C6402195221D900A3668A /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
 		2E3C6403195221D900A3668A /* PhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEditViewController.h; sourceTree = "<group>"; };
 		2E3C6404195221D900A3668A /* PhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEditViewController.m; sourceTree = "<group>"; };
-		2E3C6407195221EF00A3668A /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
-		2E3C6408195221EF00A3668A /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
 		2E41D74A1946446E00FE4CE2 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		2E48965F194601CD002584BB /* WildFire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WildFire.png; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 		2E489664194602A5002584BB /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
 		2E489665194602A5002584BB /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
 		2E5BCFFC1942448700B3446E /* contactsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactsIcon.png; sourceTree = "<group>"; };
+		2E7ED505195B4B0B006A1842 /* IMG_1629.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_1629.MOV; sourceTree = "<group>"; };
 		2E909761194613B0003BF5A4 /* FIndFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIndFriendsTableViewController.h; sourceTree = "<group>"; };
 		2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIndFriendsTableViewController.m; sourceTree = "<group>"; };
 		2E90976419461594003BF5A4 /* ProfilePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageViewController.h; sourceTree = "<group>"; };
@@ -230,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1AE90E1959F940005D3FB1 /* MediaPlayer.framework in Frameworks */,
 				9A381678193F7FF3000B4E46 /* CoreGraphics.framework in Frameworks */,
 				9A65C406195217D4001D920B /* AWSS3.framework in Frameworks */,
 				9A65C404195217CC001D920B /* AWSRuntime.framework in Frameworks */,
@@ -278,8 +286,16 @@
 			children = (
 				2E1AE8FE1959E177005D3FB1 /* AudioPlayerViewController.h */,
 				2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */,
+				2E1AE9041959E5E8005D3FB1 /* AVCamPreviewView.h */,
+				2E1AE9051959E5E8005D3FB1 /* AVCamPreviewView.m */,
+				2E1AE9061959E5E8005D3FB1 /* AVCamViewController.h */,
+				2E1AE9071959E5E8005D3FB1 /* AVCamViewController.m */,
+				2E1AE9081959E5E8005D3FB1 /* AVPlayerClass.h */,
+				2E1AE9091959E5E8005D3FB1 /* AVPlayerClass.m */,
 				2E1AE9011959E1B2005D3FB1 /* MoviePlayerViewController.h */,
 				2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */,
+				2E3C6403195221D900A3668A /* PhotoEditViewController.h */,
+				2E3C6404195221D900A3668A /* PhotoEditViewController.m */,
 			);
 			name = "Camera Files";
 			sourceTree = "<group>";
@@ -287,6 +303,7 @@
 		2E5BCFF71942428100B3446E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2E7ED505195B4B0B006A1842 /* IMG_1629.MOV */,
 				2ECF47F719465F7A00D53EFB /* Wild Fire Logo.png */,
 				2E48965F194601CD002584BB /* WildFire.png */,
 				2E28FAFF1944C0B3001B1634 /* facebookIcon.png */,
@@ -318,6 +335,7 @@
 		9A381674193F7FF3000B4E46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1AE90D1959F940005D3FB1 /* MediaPlayer.framework */,
 				9A65C405195217D4001D920B /* AWSS3.framework */,
 				9A65C403195217CC001D920B /* AWSRuntime.framework */,
 				9A2EB302194234B600A9D609 /* Social.framework */,
@@ -354,15 +372,15 @@
 		9A38167B193F7FF3000B4E46 /* Wildfire */ = {
 			isa = PBXGroup;
 			children = (
-				2E1AE8FD1959E093005D3FB1 /* Camera Files */,
-				2E5BCFF71942428100B3446E /* Images */,
-				9A3816AE193F801B000B4E46 /* View Controllers */,
-				9A3816AD193F8010000B4E46 /* Classes */,
 				9A381684193F7FF3000B4E46 /* AppDelegate.h */,
 				9A381685193F7FF3000B4E46 /* AppDelegate.m */,
+				2E1AE8FD1959E093005D3FB1 /* Camera Files */,
+				9A3816AD193F8010000B4E46 /* Classes */,
+				2E5BCFF71942428100B3446E /* Images */,
 				9A381690193F7FF3000B4E46 /* Images.xcassets */,
-				9A38167C193F7FF3000B4E46 /* Supporting Files */,
 				9A3816EB193FB1CC000B4E46 /* iPhoneMain.storyboard */,
+				9A38167C193F7FF3000B4E46 /* Supporting Files */,
+				9A3816AE193F801B000B4E46 /* View Controllers */,
 			);
 			path = Wildfire;
 			sourceTree = "<group>";
@@ -400,41 +418,39 @@
 		9A3816AD193F8010000B4E46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2E3C6407195221EF00A3668A /* AVCamPreviewView.h */,
-				2E3C6408195221EF00A3668A /* AVCamPreviewView.m */,
+				9A65C4071952181F001D920B /* Constants.h */,
+				9A65C4081952181F001D920B /* Constants.m */,
+				9A6EA36419475BE700766A72 /* Fire.h */,
+				9A6EA36519475BE700766A72 /* Fire.m */,
+				9AB2B5FB1947A6D0002DB3D7 /* FireTableCell.h */,
+				9AB2B5FC1947A6D0002DB3D7 /* FireTableCell.m */,
+				9A6EA36A19475C2600766A72 /* Following.h */,
+				9A6EA36B19475C2600766A72 /* Following.m */,
+				2E90977019463942003BF5A4 /* InviteFriendsTableViewCell.h */,
+				2E90977119463942003BF5A4 /* InviteFriendsTableViewCell.m */,
+				9AC22B9C194619FF00DBBDD0 /* MBProgressHUD.h */,
+				9AC22B9D194619FF00DBBDD0 /* MBProgressHUD.m */,
+				9A6EA36719475C0B00766A72 /* ReceivedFire.h */,
+				9A6EA36819475C0B00766A72 /* ReceivedFire.m */,
 				9A44AA58195093BB000121ED /* SearchUserTableCell.h */,
 				9A44AA59195093BB000121ED /* SearchUserTableCell.m */,
+				2E00CD5519478FA700EA8D2F /* SettingsTableViewCell.h */,
+				2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */,
 				9AB2B5FE1947B427002DB3D7 /* SVPullToRefresh.h */,
-				9AB2B5FF1947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.h */,
-				9AB2B6001947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m */,
-				9AB2B6011947B427002DB3D7 /* UIScrollView+SVPullToRefresh.h */,
-				9AB2B6021947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m */,
+				2ECF47F419465F2E00D53EFB /* TrendingTableViewCell.h */,
+				2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */,
 				9AC22BA719463AA200DBBDD0 /* UIImage+AlphaAdditions.h */,
 				9AC22BA819463AA200DBBDD0 /* UIImage+AlphaAdditions.m */,
 				9AC22B9F1946248E00DBBDD0 /* UIImage+ResizeAdditions.h */,
 				9AC22BA01946248E00DBBDD0 /* UIImage+ResizeAdditions.m */,
 				9AC22BA11946248E00DBBDD0 /* UIImage+RoundedCornerAdditions.h */,
 				9AC22BA21946248E00DBBDD0 /* UIImage+RoundedCornerAdditions.m */,
-				9AC22B9C194619FF00DBBDD0 /* MBProgressHUD.h */,
-				9AC22B9D194619FF00DBBDD0 /* MBProgressHUD.m */,
+				9AB2B5FF1947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.h */,
+				9AB2B6001947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m */,
+				9AB2B6011947B427002DB3D7 /* UIScrollView+SVPullToRefresh.h */,
+				9AB2B6021947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m */,
 				9AC22B961946123B00DBBDD0 /* Utilities.h */,
 				9AC22B971946123B00DBBDD0 /* Utilities.m */,
-				2E90977019463942003BF5A4 /* InviteFriendsTableViewCell.h */,
-				2E90977119463942003BF5A4 /* InviteFriendsTableViewCell.m */,
-				2ECF47F419465F2E00D53EFB /* TrendingTableViewCell.h */,
-				2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */,
-				9A6EA36419475BE700766A72 /* Fire.h */,
-				9A6EA36519475BE700766A72 /* Fire.m */,
-				9A6EA36719475C0B00766A72 /* ReceivedFire.h */,
-				9A6EA36819475C0B00766A72 /* ReceivedFire.m */,
-				9A6EA36A19475C2600766A72 /* Following.h */,
-				9A6EA36B19475C2600766A72 /* Following.m */,
-				2E00CD5519478FA700EA8D2F /* SettingsTableViewCell.h */,
-				2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */,
-				9AB2B5FB1947A6D0002DB3D7 /* FireTableCell.h */,
-				9AB2B5FC1947A6D0002DB3D7 /* FireTableCell.m */,
-				9A65C4071952181F001D920B /* Constants.h */,
-				9A65C4081952181F001D920B /* Constants.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -442,41 +458,37 @@
 		9A3816AE193F801B000B4E46 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2E3C6401195221D900A3668A /* AVCamViewController.h */,
-				2E3C6402195221D900A3668A /* AVCamViewController.m */,
-				2E3C6403195221D900A3668A /* PhotoEditViewController.h */,
-				2E3C6404195221D900A3668A /* PhotoEditViewController.m */,
-				2E90976A194620A6003BF5A4 /* ContactsPageViewController.h */,
-				2E90976B194620A6003BF5A4 /* ContactsPageViewController.m */,
-				2E489664194602A5002584BB /* LoginScreenViewController.h */,
-				2E489665194602A5002584BB /* LoginScreenViewController.m */,
 				2E4896611946027B002584BB /* CameraViewController.h */,
 				2E4896621946027B002584BB /* CameraViewController.m */,
+				9AABAF761958C46D00C920A3 /* CampaignViewController.h */,
+				9AABAF771958C46D00C920A3 /* CampaignViewController.m */,
+				2E90976A194620A6003BF5A4 /* ContactsPageViewController.h */,
+				2E90976B194620A6003BF5A4 /* ContactsPageViewController.m */,
+				2E909761194613B0003BF5A4 /* FIndFriendsTableViewController.h */,
+				2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */,
+				9A65C40A19534077001D920B /* FireViewController.h */,
+				9A65C40B19534077001D920B /* FireViewController.m */,
+				2E41D74A1946446E00FE4CE2 /* HomePageViewController.h */,
+				2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */,
 				2E28FAFA1944BB04001B1634 /* InviteFriendsTableViewController.h */,
 				2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */,
-				9AC22B9319460D2300DBBDD0 /* SignUpViewController.h */,
-				9AC22B9419460D2300DBBDD0 /* SignUpViewController.m */,
+				2E489664194602A5002584BB /* LoginScreenViewController.h */,
+				2E489665194602A5002584BB /* LoginScreenViewController.m */,
 				9A3816C8193F87F5000B4E46 /* MapView.h */,
 				9A3816C9193F87F5000B4E46 /* MapView.m */,
 				9A3816CA193F87F5000B4E46 /* MapView.xib */,
-				2E909761194613B0003BF5A4 /* FIndFriendsTableViewController.h */,
-				2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */,
-				2E90976419461594003BF5A4 /* ProfilePageViewController.h */,
-				2E90976519461594003BF5A4 /* ProfilePageViewController.m */,
-				9AC22B99194617BB00DBBDD0 /* SettingsViewController.h */,
-				9AC22B9A194617BB00DBBDD0 /* SettingsViewController.m */,
 				2E90976D194633B4003BF5A4 /* PhotoViewController.h */,
 				2E90976E194633B4003BF5A4 /* PhotoViewController.m */,
-				2E41D74A1946446E00FE4CE2 /* HomePageViewController.h */,
-				2E41D74B1946446E00FE4CE2 /* HomePageViewController.m */,
-				2ECF47F91946641600D53EFB /* TrendingTableViewController.h */,
-				2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */,
+				2E90976419461594003BF5A4 /* ProfilePageViewController.h */,
+				2E90976519461594003BF5A4 /* ProfilePageViewController.m */,
 				9A44AA551950927B000121ED /* SearchUserViewController.h */,
 				9A44AA561950927B000121ED /* SearchUserViewController.m */,
-				9A65C40A19534077001D920B /* FireViewController.h */,
-				9A65C40B19534077001D920B /* FireViewController.m */,
-				9AABAF761958C46D00C920A3 /* CampaignViewController.h */,
-				9AABAF771958C46D00C920A3 /* CampaignViewController.m */,
+				9AC22B99194617BB00DBBDD0 /* SettingsViewController.h */,
+				9AC22B9A194617BB00DBBDD0 /* SettingsViewController.m */,
+				9AC22B9319460D2300DBBDD0 /* SignUpViewController.h */,
+				9AC22B9419460D2300DBBDD0 /* SignUpViewController.m */,
+				2ECF47F91946641600D53EFB /* TrendingTableViewController.h */,
+				2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -528,6 +540,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Mobile AUG";
 				TargetAttributes = {
+					9A381671193F7FF3000B4E46 = {
+						DevelopmentTeam = 2A69GLYMTG;
+					};
 					9A381695193F7FF4000B4E46 = {
 						TestTargetID = 9A381671193F7FF3000B4E46;
 					};
@@ -559,6 +574,7 @@
 			files = (
 				2E28FB001944C0B3001B1634 /* facebookIcon.png in Resources */,
 				9AC22BA61946337F00DBBDD0 /* Facebook.png in Resources */,
+				2E7ED506195B4B0B006A1842 /* IMG_1629.MOV in Resources */,
 				9A3816EA193FA69D000B4E46 /* GoogleMaps.bundle in Resources */,
 				2ECF47F819465F7A00D53EFB /* Wild Fire Logo.png in Resources */,
 				2E5BCFFD1942448700B3446E /* contactsIcon.png in Resources */,
@@ -591,6 +607,7 @@
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				9AABAF781958C46D00C920A3 /* CampaignViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
+				2E1AE90A1959E5E8005D3FB1 /* AVCamPreviewView.m in Sources */,
 				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
 				2E1AE9031959E1B2005D3FB1 /* MoviePlayerViewController.m in Sources */,
 				9A65C4091952181F001D920B /* Constants.m in Sources */,
@@ -607,13 +624,14 @@
 				2E4896631946027B002584BB /* CameraViewController.m in Sources */,
 				9AB2B5FD1947A6D0002DB3D7 /* FireTableCell.m in Sources */,
 				9A3816CB193F87F5000B4E46 /* MapView.m in Sources */,
+				2E1AE90C1959E5E8005D3FB1 /* AVPlayerClass.m in Sources */,
 				9A44AA571950927B000121ED /* SearchUserViewController.m in Sources */,
+				2E1AE90B1959E5E8005D3FB1 /* AVCamViewController.m in Sources */,
 				2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */,
 				2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */,
 				2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */,
 				2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */,
 				2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */,
-				2E3C6405195221D900A3668A /* AVCamViewController.m in Sources */,
 				2ECF47FB1946641600D53EFB /* TrendingTableViewController.m in Sources */,
 				9A381682193F7FF3000B4E46 /* main.m in Sources */,
 				2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */,
@@ -622,7 +640,6 @@
 				2E3C6406195221D900A3668A /* PhotoEditViewController.m in Sources */,
 				9AC22B9B194617BB00DBBDD0 /* SettingsViewController.m in Sources */,
 				9AC22B9E194619FF00DBBDD0 /* MBProgressHUD.m in Sources */,
-				2E3C6409195221EF00A3668A /* AVCamPreviewView.m in Sources */,
 				9A6EA36619475BE700766A72 /* Fire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,7 +759,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Rosenbaum (7R4ARCLY9A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -758,7 +776,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8DCD7195-E055-4DCA-BF48-26AFBB2E2BB8";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -768,7 +786,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Rosenbaum (7R4ARCLY9A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -784,7 +803,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8DCD7195-E055-4DCA-BF48-26AFBB2E2BB8";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
