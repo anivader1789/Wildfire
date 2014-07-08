@@ -12,6 +12,8 @@
 
 @interface MoviePlayerViewController : UIViewController
 
+@property NSData *tempData;
+
 @property(nonatomic,strong)MPMoviePlayerController *moviePlayer;
 
 @property NSURL *videoURL;//Used to store path to video.
