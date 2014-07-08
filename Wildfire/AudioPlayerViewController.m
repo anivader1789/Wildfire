@@ -52,14 +52,21 @@
 - (void)playAudio{
         NSError *error;
     
-        
-        _audioPlayer = [[AVAudioPlayer alloc]
-                        initWithContentsOfURL:_audioUrl
-                        error:&error];
-        
-        _audioPlayer.delegate = self;
     
-    _audioData = [NSData dataWithContentsOfURL:_audioUrl];//Storing audio in NSDATA.
+    
+     _audioPlayer.delegate = self;
+    
+    
+       
+    
+    //_audioData = [NSData dataWithContentsOfURL:_audioUrl];//Storing audio in NSDATA.
+    
+    
+    
+    _audioPlayer = [[AVAudioPlayer alloc]initWithData:_audioData error:nil];
+    
+    
+    NSLog(@"Audio Data********************: %@",[_audioData description]);
     
         if (error)
             NSLog(@"Error: %@",

@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) NSURL *audioUrl;//Used to store path to audio.
 
+@property(strong,nonatomic)AVAsset* avAsset;
+
 @property NSData *audioData;//Used to store audio data.
 
 

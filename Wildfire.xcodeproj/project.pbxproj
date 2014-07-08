@@ -21,6 +21,7 @@
 		2E4896631946027B002584BB /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4896621946027B002584BB /* CameraViewController.m */; };
 		2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E489665194602A5002584BB /* LoginScreenViewController.m */; };
 		2E5BCFFD1942448700B3446E /* contactsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BCFFC1942448700B3446E /* contactsIcon.png */; };
+		2E6B0F27195CB28B002D26A1 /* MergeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6B0F26195CB28B002D26A1 /* MergeVideo.m */; };
 		2E7ED506195B4B0B006A1842 /* IMG_1629.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 2E7ED505195B4B0B006A1842 /* IMG_1629.MOV */; };
 		2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */; };
 		2E90976619461594003BF5A4 /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90976519461594003BF5A4 /* ProfilePageViewController.m */; };
@@ -131,6 +132,8 @@
 		2E489664194602A5002584BB /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
 		2E489665194602A5002584BB /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
 		2E5BCFFC1942448700B3446E /* contactsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactsIcon.png; sourceTree = "<group>"; };
+		2E6B0F25195CB28B002D26A1 /* MergeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeVideo.h; sourceTree = "<group>"; };
+		2E6B0F26195CB28B002D26A1 /* MergeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeVideo.m; sourceTree = "<group>"; };
 		2E7ED505195B4B0B006A1842 /* IMG_1629.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_1629.MOV; sourceTree = "<group>"; };
 		2E909761194613B0003BF5A4 /* FIndFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIndFriendsTableViewController.h; sourceTree = "<group>"; };
 		2E909762194613B0003BF5A4 /* FIndFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIndFriendsTableViewController.m; sourceTree = "<group>"; };
@@ -296,12 +299,17 @@
 		2E1AE8FD1959E093005D3FB1 /* Camera Files */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				9A1EED91196B4FF0002F150B /* MoviePlayerViewController.h */,
 				9A1EED92196B4FF0002F150B /* MoviePlayerViewController.m */,
 				9A1EED8E196B4E9F002F150B /* MergeVideo.h */,
 				9A1EED8F196B4E9F002F150B /* MergeVideo.m */,
 				9A1EED8B196B4CD4002F150B /* AVCamViewController.h */,
 				9A1EED8C196B4CD4002F150B /* AVCamViewController.m */,
+=======
+				2E6B0F25195CB28B002D26A1 /* MergeVideo.h */,
+				2E6B0F26195CB28B002D26A1 /* MergeVideo.m */,
+>>>>>>> FETCH_HEAD
 				2E1AE8FE1959E177005D3FB1 /* AudioPlayerViewController.h */,
 				2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */,
 				2E1AE9041959E5E8005D3FB1 /* AVCamPreviewView.h */,
@@ -630,6 +638,7 @@
 				9A1EED8D196B4CD4002F150B /* AVCamViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
 				2E1AE90A1959E5E8005D3FB1 /* AVCamPreviewView.m in Sources */,
+				2E6B0F27195CB28B002D26A1 /* MergeVideo.m in Sources */,
 				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
 				9A65C4091952181F001D920B /* Constants.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
