@@ -11,6 +11,7 @@
 #import <AWSRuntime/AWSRuntime.h>
 #import "Constants.h"
 #import "Utilities.h"
+#import "Fire.h"
 
 @interface FireViewController ()
 
@@ -31,6 +32,26 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    PFQuery *query = [Fire query];
+    [query getObjectInBackgroundWithId:_fire.objectId block:^(PFObject *object, NSError *error) {
+        NSString *views = [object objectForKey:@"NumberOfViews"];
+        int viewsInt = [views intValue];
+        NSLog(@"Views 1: %d",viewsInt);
+        viewsInt++;
+        NSLog(@"Views 2: %d",viewsInt);
+        views = [NSString stringWithFormat:@"%d",viewsInt];
+        Fire *f = (Fire*)object ;
+        f.NumberOfViews = views;
+        [f setObject:views forKey:@"NumberOfViews"];
+        //[f setObject:[NSNumber numberWithInt:views] forKey:@"numOfViews"];
+        
+        [f saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(@"Views 3: %@",[f objectForKey:@"NumberOfViews"]);
+            _viewsLabel.text = [NSString stringWithFormat:@"# Views: %@",[f objectForKey:@"NumberOfViews"]];
+        }];
+        
+    }];
     
     if(![ACCESS_KEY_ID isEqualToString:@"CHANGE ME"]
        && _s3 == nil)
@@ -68,8 +89,12 @@
         }
     }
 
-    _fire.numOfViews++;
-    [_fire saveEventually];
+    //_fire.numOfViews++;
+    //Fire *fire = recvFire.fire;
+    
+
+    
+    
     [self displayImage];
 }
 
@@ -204,13 +229,16 @@
         }];
         
     }
-    [_receivedFire delete];
+    if(_receivedFire)
+        [_receivedFire delete];
     [self.navigationController popViewControllerAnimated:YES];
 
 }
 
 - (IBAction)putOut:(id)sender {
-    [_receivedFire delete];
+    if(_receivedFire)
+        [_receivedFire delete];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

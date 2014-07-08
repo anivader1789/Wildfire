@@ -167,6 +167,8 @@ CGFloat animatedDistance;
                             [newUser setObject:privateChannelName forKey:@"channel"];
                         }
                         
+                        
+                        
                         //Save the user
                         [newUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             

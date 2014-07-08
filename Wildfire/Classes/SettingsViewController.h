@@ -18,6 +18,8 @@
 }
 
 - (IBAction)signoutButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UISwitch *privateSwitch;
+- (IBAction)switch:(id)sender;
 
 
 @end

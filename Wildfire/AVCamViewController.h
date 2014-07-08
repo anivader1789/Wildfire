@@ -48,8 +48,9 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "MergeVideo.h"
 
-@interface AVCamViewController : UIViewController <AVAudioRecorderDelegate,UIImagePickerControllerDelegate>{
+@interface AVCamViewController : UIViewController <AVAudioRecorderDelegate,UIImagePickerControllerDelegate,AVAudioPlayerDelegate>{
     
 bool audioIsRecording;
     __block UIImage *largeimage;
@@ -58,6 +59,7 @@ bool audioIsRecording;
 
 //Audio recorder properties.
 @property (strong, nonatomic) AVAudioRecorder *audioRecorder;
+@property(strong,nonatomic)AVAsset* audioAsset;
 
 
 
@@ -65,13 +67,20 @@ bool audioIsRecording;
 @property (strong, nonatomic) IBOutlet UIButton *recordAudioOutlet;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *recordingFormatToggleOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *photoLibraryOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *testMergeButtonOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *removeLastClipOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *captureButtonOutlet;
+@property (strong, nonatomic) IBOutlet UIImageView *topBlackBarOutlet;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBlackBarOutlet;
 
 //Buttons
-- (IBAction)testButton:(id)sender;
 - (IBAction)videoTestButton:(id)sender;
 - (IBAction)recordAudioAction:(id)sender;
 - (IBAction)recordAction:(id)sender;
 - (IBAction)picVidPickerAction:(id)sender;
+- (IBAction)testMergeAction:(id)sender;
+- (IBAction)removeLastClip:(id)sender;
+- (IBAction)recordingFormatToggleAction:(id)sender;
 
 
 @end

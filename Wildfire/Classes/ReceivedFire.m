@@ -25,6 +25,7 @@
     PFQuery* query = [ReceivedFire query];
     
     [query whereKey:@"receiver" equalTo:[PFUser currentUser]];
+    [query includeKey:@"Fire"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
@@ -32,7 +33,9 @@
             if(objects.count > 0){
                 NSMutableArray* results = [[NSMutableArray alloc] init];
                 for(int i=0;i<objects.count;i++){
-                    //if([Utilities isExpired:[[objects objectAtIndex:i] objectForKey:@"createdAt"]]){
+                    ReceivedFire *rcvdFire = (ReceivedFire*)[objects objectAtIndex:i];
+                    NSLog(@"objectid: %@  -- created: %@",rcvdFire.objectId,rcvdFire.createdAt);
+                    //if([Utilities isExpired:rcvdFire.createdAt]){
                         [results addObject:[objects objectAtIndex:i]];
                     //}
                 }

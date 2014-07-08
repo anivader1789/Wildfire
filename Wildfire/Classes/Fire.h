@@ -45,7 +45,7 @@ typedef enum{
 @property (strong, nonatomic) PFGeoPoint *locationOrigin;
 @property (strong, nonatomic) PFUser *originator;
 @property (strong, nonatomic) NSURL *fireURL;
-@property int numOfViews;
+@property (strong, nonatomic) NSString* NumberOfViews;
 
 
 
