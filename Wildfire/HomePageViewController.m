@@ -119,7 +119,6 @@
     
     ProfilePageViewController * profilePage = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfilePage"];
     self.navigationController.navigationBarHidden = NO;
-    profilePage.user = [PFUser currentUser];
     [self.navigationController pushViewController:profilePage animated:NO];
     
 }
@@ -335,7 +334,6 @@
     
     FireViewController *fireView = [self.storyboard instantiateViewControllerWithIdentifier:@"fireView"];
     fireView.receivedFire = recvFire;
-    
     fireView.fire = fire;
     [self.navigationController pushViewController:fireView animated:YES];
     

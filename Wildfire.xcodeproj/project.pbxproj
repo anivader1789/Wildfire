@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */; };
 		2E1AE9001959E177005D3FB1 /* AudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */; };
+		2E1AE9031959E1B2005D3FB1 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */; };
 		2E1AE90A1959E5E8005D3FB1 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9051959E5E8005D3FB1 /* AVCamPreviewView.m */; };
+		2E1AE90B1959E5E8005D3FB1 /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9071959E5E8005D3FB1 /* AVCamViewController.m */; };
 		2E1AE90C1959E5E8005D3FB1 /* AVPlayerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE9091959E5E8005D3FB1 /* AVPlayerClass.m */; };
 		2E1AE90E1959F940005D3FB1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1AE90D1959F940005D3FB1 /* MediaPlayer.framework */; };
 		2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E28FAFB1944BB04001B1634 /* InviteFriendsTableViewController.m */; };
@@ -31,10 +33,6 @@
 		2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF47F519465F2E00D53EFB /* TrendingTableViewCell.m */; };
 		2ECF47F819465F7A00D53EFB /* Wild Fire Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECF47F719465F7A00D53EFB /* Wild Fire Logo.png */; };
 		2ECF47FB1946641600D53EFB /* TrendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */; };
-		9A1EED8A196B2ADE002F150B /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EED89196B2ADE002F150B /* AudioPlayer.m */; };
-		9A1EED8D196B4CD4002F150B /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EED8C196B4CD4002F150B /* AVCamViewController.m */; };
-		9A1EED90196B4E9F002F150B /* MergeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EED8F196B4E9F002F150B /* MergeVideo.m */; };
-		9A1EED93196B4FF0002F150B /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EED92196B4FF0002F150B /* MoviePlayerViewController.m */; };
 		9A2EB2F41942311200A9D609 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EB2F31942311200A9D609 /* Parse.framework */; };
 		9A2EB2F5194232EC00A9D609 /* facebooksdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EB2F11942153100A9D609 /* facebooksdk.framework */; };
 		9A2EB2F71942332F00A9D609 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EB2F61942332F00A9D609 /* StoreKit.framework */; };
@@ -82,8 +80,6 @@
 		9A6EA36619475BE700766A72 /* Fire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36519475BE700766A72 /* Fire.m */; };
 		9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36819475C0B00766A72 /* ReceivedFire.m */; };
 		9A6EA36C19475C2600766A72 /* Following.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EA36B19475C2600766A72 /* Following.m */; };
-		9A82E6C3195B5E7F005923DF /* FollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A82E6C2195B5E7F005923DF /* FollowersViewController.m */; };
-		9A82E6C9195B639C005923DF /* FollowersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A82E6C8195B639C005923DF /* FollowersTableViewCell.m */; };
 		9AABAF781958C46D00C920A3 /* CampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABAF771958C46D00C920A3 /* CampaignViewController.m */; };
 		9AB2B5FD1947A6D0002DB3D7 /* FireTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB2B5FC1947A6D0002DB3D7 /* FireTableCell.m */; };
 		9AB2B6031947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB2B6001947B427002DB3D7 /* UIScrollView+SVInfiniteScrolling.m */; };
@@ -113,8 +109,12 @@
 		2E00CD5619478FA700EA8D2F /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
 		2E1AE8FE1959E177005D3FB1 /* AudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerViewController.h; sourceTree = "<group>"; };
 		2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerViewController.m; sourceTree = "<group>"; };
+		2E1AE9011959E1B2005D3FB1 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
+		2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		2E1AE9041959E5E8005D3FB1 /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
 		2E1AE9051959E5E8005D3FB1 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		2E1AE9061959E5E8005D3FB1 /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
+		2E1AE9071959E5E8005D3FB1 /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
 		2E1AE9081959E5E8005D3FB1 /* AVPlayerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerClass.h; sourceTree = "<group>"; };
 		2E1AE9091959E5E8005D3FB1 /* AVPlayerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerClass.m; sourceTree = "<group>"; };
 		2E1AE90D1959F940005D3FB1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -150,14 +150,6 @@
 		2ECF47F719465F7A00D53EFB /* Wild Fire Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wild Fire Logo.png"; sourceTree = "<group>"; };
 		2ECF47F91946641600D53EFB /* TrendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingTableViewController.h; sourceTree = "<group>"; };
 		2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingTableViewController.m; sourceTree = "<group>"; };
-		9A1EED88196B2ADE002F150B /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
-		9A1EED89196B2ADE002F150B /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
-		9A1EED8B196B4CD4002F150B /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
-		9A1EED8C196B4CD4002F150B /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
-		9A1EED8E196B4E9F002F150B /* MergeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeVideo.h; sourceTree = "<group>"; };
-		9A1EED8F196B4E9F002F150B /* MergeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeVideo.m; sourceTree = "<group>"; };
-		9A1EED91196B4FF0002F150B /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
-		9A1EED92196B4FF0002F150B /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		9A2EB2F11942153100A9D609 /* facebooksdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = facebooksdk.framework; sourceTree = "<group>"; };
 		9A2EB2F31942311200A9D609 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9A2EB2F61942332F00A9D609 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -217,10 +209,6 @@
 		9A6EA36819475C0B00766A72 /* ReceivedFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceivedFire.m; path = Classes/ReceivedFire.m; sourceTree = "<group>"; };
 		9A6EA36A19475C2600766A72 /* Following.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Following.h; path = Classes/Following.h; sourceTree = "<group>"; };
 		9A6EA36B19475C2600766A72 /* Following.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Following.m; path = Classes/Following.m; sourceTree = "<group>"; };
-		9A82E6C1195B5E7F005923DF /* FollowersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FollowersViewController.h; path = Classes/FollowersViewController.h; sourceTree = "<group>"; };
-		9A82E6C2195B5E7F005923DF /* FollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FollowersViewController.m; path = Classes/FollowersViewController.m; sourceTree = "<group>"; };
-		9A82E6C7195B639C005923DF /* FollowersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FollowersTableViewCell.h; path = Classes/FollowersTableViewCell.h; sourceTree = "<group>"; };
-		9A82E6C8195B639C005923DF /* FollowersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FollowersTableViewCell.m; path = Classes/FollowersTableViewCell.m; sourceTree = "<group>"; };
 		9AABAF761958C46D00C920A3 /* CampaignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CampaignViewController.h; path = Classes/CampaignViewController.h; sourceTree = "<group>"; };
 		9AABAF771958C46D00C920A3 /* CampaignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CampaignViewController.m; path = Classes/CampaignViewController.m; sourceTree = "<group>"; };
 		9AB2B5FB1947A6D0002DB3D7 /* FireTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireTableCell.h; path = Classes/FireTableCell.h; sourceTree = "<group>"; };
@@ -299,27 +287,20 @@
 		2E1AE8FD1959E093005D3FB1 /* Camera Files */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				9A1EED91196B4FF0002F150B /* MoviePlayerViewController.h */,
-				9A1EED92196B4FF0002F150B /* MoviePlayerViewController.m */,
-				9A1EED8E196B4E9F002F150B /* MergeVideo.h */,
-				9A1EED8F196B4E9F002F150B /* MergeVideo.m */,
-				9A1EED8B196B4CD4002F150B /* AVCamViewController.h */,
-				9A1EED8C196B4CD4002F150B /* AVCamViewController.m */,
-=======
 				2E6B0F25195CB28B002D26A1 /* MergeVideo.h */,
 				2E6B0F26195CB28B002D26A1 /* MergeVideo.m */,
->>>>>>> FETCH_HEAD
 				2E1AE8FE1959E177005D3FB1 /* AudioPlayerViewController.h */,
 				2E1AE8FF1959E177005D3FB1 /* AudioPlayerViewController.m */,
 				2E1AE9041959E5E8005D3FB1 /* AVCamPreviewView.h */,
 				2E1AE9051959E5E8005D3FB1 /* AVCamPreviewView.m */,
+				2E1AE9061959E5E8005D3FB1 /* AVCamViewController.h */,
+				2E1AE9071959E5E8005D3FB1 /* AVCamViewController.m */,
 				2E1AE9081959E5E8005D3FB1 /* AVPlayerClass.h */,
 				2E1AE9091959E5E8005D3FB1 /* AVPlayerClass.m */,
+				2E1AE9011959E1B2005D3FB1 /* MoviePlayerViewController.h */,
+				2E1AE9021959E1B2005D3FB1 /* MoviePlayerViewController.m */,
 				2E3C6403195221D900A3668A /* PhotoEditViewController.h */,
 				2E3C6404195221D900A3668A /* PhotoEditViewController.m */,
-				9A1EED88196B2ADE002F150B /* AudioPlayer.h */,
-				9A1EED89196B2ADE002F150B /* AudioPlayer.m */,
 			);
 			name = "Camera Files";
 			sourceTree = "<group>";
@@ -475,8 +456,6 @@
 				9AB2B6021947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m */,
 				9AC22B961946123B00DBBDD0 /* Utilities.h */,
 				9AC22B971946123B00DBBDD0 /* Utilities.m */,
-				9A82E6C7195B639C005923DF /* FollowersTableViewCell.h */,
-				9A82E6C8195B639C005923DF /* FollowersTableViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -515,8 +494,6 @@
 				9AC22B9419460D2300DBBDD0 /* SignUpViewController.m */,
 				2ECF47F91946641600D53EFB /* TrendingTableViewController.h */,
 				2ECF47FA1946641600D53EFB /* TrendingTableViewController.m */,
-				9A82E6C1195B5E7F005923DF /* FollowersViewController.h */,
-				9A82E6C2195B5E7F005923DF /* FollowersViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -630,16 +607,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A82E6C3195B5E7F005923DF /* FollowersViewController.m in Sources */,
 				9AC22BA31946248E00DBBDD0 /* UIImage+ResizeAdditions.m in Sources */,
 				2E1AE9001959E177005D3FB1 /* AudioPlayerViewController.m in Sources */,
 				9AC22B9519460D2300DBBDD0 /* SignUpViewController.m in Sources */,
 				9AABAF781958C46D00C920A3 /* CampaignViewController.m in Sources */,
-				9A1EED8D196B4CD4002F150B /* AVCamViewController.m in Sources */,
 				2E489666194602A5002584BB /* LoginScreenViewController.m in Sources */,
 				2E1AE90A1959E5E8005D3FB1 /* AVCamPreviewView.m in Sources */,
 				2E6B0F27195CB28B002D26A1 /* MergeVideo.m in Sources */,
 				9A44AA5A195093BB000121ED /* SearchUserTableCell.m in Sources */,
+				2E1AE9031959E1B2005D3FB1 /* MoviePlayerViewController.m in Sources */,
 				9A65C4091952181F001D920B /* Constants.m in Sources */,
 				9AC22BA919463AA200DBBDD0 /* UIImage+AlphaAdditions.m in Sources */,
 				9A6EA36919475C0B00766A72 /* ReceivedFire.m in Sources */,
@@ -656,22 +632,19 @@
 				9A3816CB193F87F5000B4E46 /* MapView.m in Sources */,
 				2E1AE90C1959E5E8005D3FB1 /* AVPlayerClass.m in Sources */,
 				9A44AA571950927B000121ED /* SearchUserViewController.m in Sources */,
+				2E1AE90B1959E5E8005D3FB1 /* AVCamViewController.m in Sources */,
 				2E41D74C1946446E00FE4CE2 /* HomePageViewController.m in Sources */,
 				2E00CD5719478FA700EA8D2F /* SettingsTableViewCell.m in Sources */,
 				2ECF47F619465F2E00D53EFB /* TrendingTableViewCell.m in Sources */,
 				2E28FAFC1944BB04001B1634 /* InviteFriendsTableViewController.m in Sources */,
 				2E90976C194620A6003BF5A4 /* ContactsPageViewController.m in Sources */,
-				9A1EED93196B4FF0002F150B /* MoviePlayerViewController.m in Sources */,
 				2ECF47FB1946641600D53EFB /* TrendingTableViewController.m in Sources */,
 				9A381682193F7FF3000B4E46 /* main.m in Sources */,
 				2E909763194613B0003BF5A4 /* FIndFriendsTableViewController.m in Sources */,
-				9A1EED90196B4E9F002F150B /* MergeVideo.m in Sources */,
 				2E90976F194633B4003BF5A4 /* PhotoViewController.m in Sources */,
 				9AB2B6041947B427002DB3D7 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				2E3C6406195221D900A3668A /* PhotoEditViewController.m in Sources */,
-				9A1EED8A196B2ADE002F150B /* AudioPlayer.m in Sources */,
 				9AC22B9B194617BB00DBBDD0 /* SettingsViewController.m in Sources */,
-				9A82E6C9195B639C005923DF /* FollowersTableViewCell.m in Sources */,
 				9AC22B9E194619FF00DBBDD0 /* MBProgressHUD.m in Sources */,
 				9A6EA36619475BE700766A72 /* Fire.m in Sources */,
 			);
@@ -792,8 +765,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Rosenbaum (7R4ARCLY9A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Rosenbaum (7R4ARCLY9A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -809,7 +782,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EB394A25-6D28-467C-AE01-4E6532D89E07";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -819,8 +792,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Rosenbaum (7R4ARCLY9A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Rosenbaum (7R4ARCLY9A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -836,7 +809,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EB394A25-6D28-467C-AE01-4E6532D89E07";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

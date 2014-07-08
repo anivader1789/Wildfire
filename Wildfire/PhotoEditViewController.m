@@ -177,7 +177,7 @@
     newFire.fireType = 2;
     
     newFire.originator = [PFUser currentUser];
-    newFire.NumberOfViews = [NSString stringWithFormat:@"%d",1];
+    //newFire.numOfViews = 1;
     NSLog(@"okay here");
    
     

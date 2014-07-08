@@ -145,12 +145,4 @@
     [[FBSession activeSession] closeAndClearTokenInformation];
      */
 }
-- (IBAction)switch:(id)sender {
-    if(_privateSwitch.on){
-        
-    }
-    else{
-        
-    }
-}
 @end

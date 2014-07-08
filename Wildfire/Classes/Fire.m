@@ -9,7 +9,7 @@
 #import "Fire.h"
 
 @implementation Fire
-@dynamic category,fireType,fireURL,originator,locationList,locationOrigin,NumberOfViews;
+@dynamic category,fireType,fireURL,originator,locationList,locationOrigin,numOfViews;
 
 
 

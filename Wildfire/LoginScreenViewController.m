@@ -37,15 +37,6 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     gestureRecognizer.cancelsTouchesInView = NO; //so that action such as clear text field button can be pressed
     [self.view addGestureRecognizer:gestureRecognizer];
-    
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"I'm a man!",@"msg",
-                                                    [NSNumber numberWithInt:50], @"num", nil];
-    
-    [PFCloud callFunctionInBackground:@"Testing" withParameters:dic block:^(id object, NSError *error) {
-        
-        
-        
-    }];
 
 }
 

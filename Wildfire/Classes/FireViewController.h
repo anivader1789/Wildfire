@@ -20,6 +20,5 @@
 @property (strong, nonatomic) ReceivedFire *receivedFire;
 @property (strong, nonatomic) NSMutableArray *followers;
 @property (nonatomic, retain) AmazonS3Client *s3;
-@property (strong, nonatomic) IBOutlet UILabel *viewsLabel;
 
 @end
